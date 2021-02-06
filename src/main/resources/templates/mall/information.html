@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="../../static/lib/layui/css/layui.css">
+  <script type="text/javascript" src="../../static/lib/layui/layui.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body>
+
+<th:block th:include="common.html :: nav"></th:block>
+
+
+
+  <div class="header">
+    <div class="headerLayout w1200">
+      <div class="headerCon">
+        <h1 class="mallLogo">
+          <a href="/">Gee商城</a>
+        </h1>
+        <div class="mallSearch">
+          <form action="/toResult" class="layui-form" method="post" novalidate>
+            <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input" placeholder="请输入需要的商品">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">
+                <i class="layui-icon layui-icon-search"></i>
+            </button>
+            <input type="hidden" name="" value="">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content content-nav-base information-content">
+    <div class="main-nav">
+      <div class="inner-cont0">
+        <div class="inner-cont1 w1200">
+          <div class="inner-cont2">
+            <a href="/toAllItem" class="active">所有商品</a>
+            <a href="/toInformation">电子产品资讯</a>
+            <a href="/toAbout">关于我们</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-list-box">
+      <div class="info-list w1200">
+        <div class="item-box layui-clear" id="list-cont">
+          <div class="item">
+            <div class="text">
+              <h4>工信部：前9月电子产品进出口总额9343亿美元</h4>
+              <p class="data">2021-2-4 16:33:26</p>
+              <p class="info-cont">数据统计，2015年1-9月，我国电子信息产品进出口总额9343亿美元，同比下降1.3%,降幅同比收窄2个百分点（去年同期同比下降3.3%）。 其中，出口5556亿美元，同比下降0.6%,降幅同比收窄1.2个百分点（去年同期同比下降1.8%），占全国外贸出口比重为33.4%.进口3787亿美元，同比下降2.4%,降幅同比收窄3.1个百分点（去年同期同比下降5.5%），占全国外贸进口比重为30.5%. 9月当月，电子信息产品进出口总额1160亿美元，出口额699亿美元，同比增长2.4%,扭转了前几个月的负增长态势；进口额461亿美元，同比下降9.6%,低于8月8.7个百分点。</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="text">
+              <h4>41.4%受访者将电子产品列入2015购物单</h4>
+              <p class="data">2021-2-4 16:33:26</p>
+              <p class="info-cont">中国传媒大学一项研究显示，中国的大众消费时代已经结束，目前已进入以小众化、个性化为特点的“精众”消费时代。“精众”追求高品质生活，其消费明显由价值观驱动。比如对汽车，从追求功能发展到享受座驾;在快速消费品方面追求安全和健康。
+
+                新的一年到了，人们有什么消费计划?近日，中国青年报社会调查中心通过民意中国网和益派咨询，对2062人进行的一项调查显示，受访者在2015年最想购买的东西是质量更好的日用品(57.0%)，其次就是电子产品(41.4%)。
+
+                电子产品及其相关产品和服务，正成为备受瞩目的新消费增长点。中国电子信息产业发展研究院院长罗文认为，改革开放以来，我国消费结构经历了以基本消费品、普通耐用品、高端耐用品、轿车住房为代表的4个阶段。目前，我国已进入了以智能终端、移动互联网等为代表的信息消费新阶段。
+
+                商务部研究院《2014年消费市场发展报告》预计，信息消费的增速将远远超过社会消费品零售总额的平均增速，将达到20%以上，成为全年消费的最大亮点和消费增长的最主要引擎。
+
+                罗文指出，创造良好的信息消费环境，需要落实全国人大常委会关于加强网络信息保护的决定，推动出台网络信息安全方面的法律制度，明确互联网服务提供者保护用户个人信息的义务，规范个人信息的收集、储存和使用等行为。
+
+                调查显示，受访者在2015年的消费计划还有：在国内旅游(37.7%)、丰富文化娱乐生活(29.4%)、买车(23.2%)、出国旅游(21.7%)、买房(17.2%)、装修(12.8%)、接受进修培训(12.2%)、购买奢侈品(6.9%)等。
+
+                2014年中央经济工作会议指出，过去我国消费具有明显的模仿型排浪式特征，现在我国个性化、多样化消费渐成主流。中国社会科学院财经战略研究院研究员宋则指出，模仿型排浪式消费表现为，消费没有创新，热点比较集中，一段时间以一种消费为主导。未来消费重点将比较分散，更加个性化。
+
+                2014年5月，中国传媒大学国家广告研究院发布《2014中国精众消费报告》。报告认为，中国的大众消费时代已经结束，社会群体出现重新分散和聚合。而新聚合带来的是小众化、个性化消费的“精众”消费时代。“精众”人群的消费呈现出价值观驱动的特征。他们追求并引领高品质生活，比如在汽车消费方面，从追求功能发展到享受座驾，在快速消费品方面追求安全和健康。
+
+                报告指出，截至2013年年底，“精众”人群已占据中国城市人口的11.9%，约8700万人，他们贡献着大多数行业超过40%的市场规模。
+
+                信用卡消费、超前消费也是年轻群体和精英群体的消费特点。但本次调查显示，大多数受访者仍然支持在收入范围内有计划地消费，占比为67.2%。20.8%的受访者消费态度是能省则省。10.2%的受访者赞同超前消费。
+
+                国务院发展研究中心市场经济研究所流通研究室主任王青，在介绍《新时期我国消费新增长点研究》一书时指出，改革开放以来一轮轮的消费升级，是经济快速健康发展的重要基础。在新形势下，扩大消费新增长点，成为我国经济健康平稳增长的战略基点，也是社会发展、促进民生的必然要求。
+
+                《新时期我国消费新增长点研究》从技术创新、结构升级、消费理念转变的趋势出发，指出了7个能够形成和发展创新增长点的重要领域：信息消费、多元化消费、健康产品消费、高档商品消费、奢侈品消费、服务消费，以及基于消费升级和国际传统的住行用消费。
+
+                商务部研究院消费经济研究部主任赵萍表示，在经济和政策对消费的支撑力度都有所减缓的背景下，次高速的经济增长必然带来消费的次高速增长。但由于国家将在扩大就业、改善收入分配机制、完善社会保障方面加大力度，消费增长的收入基础将进一步得到夯实，消费增长的内生动力将继续增强。</p>
+            </div>
+          </div>
+        </div>
+        <div id="demo0" style="text-align: center;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 模版引擎导入 -->
+  <!-- <script type="text/html" id="demo">
+    {{# layui.each(d.listCont,function(index,item){}}
+    <div class="item">
+      <div class="img">
+        <img src="../res/img/new1.jpg" alt="">
+      </div>
+      <div class="text">
+        <h4>周岁内的宝宝消化不良拉肚子怎么办?</h4>
+        <p class="data">2016-12-24 16:33:26</p>
+        <p class="info-cont">宝宝在周岁之前体质相对较弱，特别是薄弱肠道，一不注意就会拉肚子;那么宝宝消化不良拉肚子</p>
+      </div>
+    </div>
+    {{# })}}
+  </script> -->
+<script>
+  layui.config({
+    base: '../../static/js/util/' //你存放新模块的目录，注意，不是layui的模块目录
+  }).use(['mm','laypage'],function(){
+      var
+      mm = layui.mm,laypage = layui.laypage;
+      laypage.render({
+        elem: 'demo0'
+        ,count: 100 //数据总数
+      });
+    // 模版引擎导入
+     // var html = demo.innerHTML;
+     // var listCont = document.getElementById('list-cont');
+     //  mm.request({
+     //    url: '../json/information.json',
+     //    success : function(res){
+     //      console.log(res)
+     //      listCont.innerHTML = mm.renderHtml(html,res)
+     //    },
+     //    error: function(res){
+     //      console.log(res);
+     //    }
+     //  })   
+});
+
+</script>
+
+
+</body>
+</html>

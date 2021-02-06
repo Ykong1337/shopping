@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gee商城</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../static/lib/layui/css/layui.css">
+    <script type="text/javascript" src="../../static/lib/layui/layui.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body id="list-cont">
+<div class="site-nav-bg" th:fragment="nav">
+    <div class="site-nav w1200">
+        <p class="sn-back-home">
+
+            <a href="/"><i class="layui-icon layui-icon-home"></i>首页</a>&nbsp;
+
+            <a href="/toCart" th:if="${session.user!=null}"><i class="layui-icon layui-icon-cart"></i>购物车</a>&nbsp;
+
+            <a href="/toMyOrder" th:if="${session.user!=null}"><i class="layui-icon layui-icon-about"></i>关于我的</a>
+
+        </p>
+        <div style="float: right;padding-right: 60px;">
+            <div class="login" th:if="${session.user==null}">
+                <a  href="/login" ><i class="layui-icon layui-icon-user"></i>登录</a>
+            </div>
+            <div class="login" th:if="${session.user!=null}">欢迎回来！
+                <a th:text="${session.user.getUserName()}" style="color: red"></a>&nbsp;
+                <a href="/logout"><i class="layui-icon layui-icon-close-fill"></i>注销</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <div class="main-nav" th:fragment="main-nav">
+        <div class="inner-cont0">
+            <div class="inner-cont1 w1200">
+                <div class="inner-cont2">
+                    <a href="/toAllItem" class="active">所有商品</a>
+                    <a href="/toInformation">电子产品资讯</a>
+                    <a href="/toAbout">关于我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

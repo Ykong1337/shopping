@@ -10,7 +10,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 </head>
 <body id="list-cont">
-<th:block th:include="common.html :: nav"></th:block>
+
+  <th:block th:include="common.html :: nav"></th:block>
 
 
 <div class="header">
@@ -127,61 +128,61 @@
       </div>
     </div>
 
-    <div class="product-cont w1200" id="product-cont">
+<!--    <div class="product-cont w1200" id="product-cont">-->
 
-      <div class="product-item product-item1 layui-clear">
-        <div class="left-title">
-          <h4><i>1F</i></h4>
-          <img src="">
-          <h5>手机推荐</h5>
-        </div>
-        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==1&&item1.getStatus()==1}">
-          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">
-            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">
-          </a>
-        </div>
-      </div>
+<!--      <div class="product-item product-item1 layui-clear">-->
+<!--        <div class="left-title">-->
+<!--          <h4><i>1F</i></h4>-->
+<!--          <img src="">-->
+<!--          <h5>手机推荐</h5>-->
+<!--        </div>-->
+<!--        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==1&&item1.getStatus()==1}">-->
+<!--          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">-->
+<!--            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="product-item product-item2 layui-clear">
-        <div class="left-title">
-          <h4><i>2F</i></h4>
-          <img src="">
-          <h5>电脑推荐</h5>
-        </div>
-        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==2&&item1.getStatus()==1}">
-          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">
-            <img th:src="'img/'+${item1.getImage()}" style="width: 260px; height: 200px;" alt="">
-          </a>
-        </div>
-      </div>
+<!--      <div class="product-item product-item2 layui-clear">-->
+<!--        <div class="left-title">-->
+<!--          <h4><i>2F</i></h4>-->
+<!--          <img src="">-->
+<!--          <h5>电脑推荐</h5>-->
+<!--        </div>-->
+<!--        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==2&&item1.getStatus()==1}">-->
+<!--          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">-->
+<!--            <img th:src="'img/'+${item1.getImage()}" style="width: 260px; height: 200px;" alt="">-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="product-item product-item3 layui-clear">
-        <div class="left-title">
-          <h4><i>3F</i></h4>
-          <img src="">
-          <h5>电视产品</h5>
-        </div>
-        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==4&&item1.getStatus()==1}">
-          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">
-            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">
-          </a>
-        </div>
-      </div>
+<!--      <div class="product-item product-item3 layui-clear">-->
+<!--        <div class="left-title">-->
+<!--          <h4><i>3F</i></h4>-->
+<!--          <img src="">-->
+<!--          <h5>电视产品</h5>-->
+<!--        </div>-->
+<!--        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==4&&item1.getStatus()==1}">-->
+<!--          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">-->
+<!--            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="product-item product-item3 layui-clear">
-        <div class="left-title">
-          <h4><i>4F</i></h4>
-          <img src="">
-          <h5>相机产品</h5>
-        </div>
-        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==3&&item1.getStatus()==1}">
-          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">
-            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">
-          </a>
-        </div>
-      </div>
+<!--      <div class="product-item product-item3 layui-clear">-->
+<!--        <div class="left-title">-->
+<!--          <h4><i>4F</i></h4>-->
+<!--          <img src="">-->
+<!--          <h5>相机产品</h5>-->
+<!--        </div>-->
+<!--        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==3&&item1.getStatus()==1}">-->
+<!--          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">-->
+<!--            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
 
-    </div>
+<!--    </div>-->
 
 
   </div>
@@ -198,7 +199,7 @@
     </div>
     <div class="mod_help w1200">
       <p>
-        <a href="javascript:;">关于我们</a>
+        <a href="/toAbout">关于我们</a>
         <span>|</span>
         <a href="javascript:;">帮助中心</a>
         <span>|</span>
@@ -220,7 +221,7 @@ layui.config({
     var carousel = layui.carousel, mm = layui.mm;
     var option = {
       elem: '#test1'
-      ,width: '1150' //设置容器宽度
+      ,width: 'auto' //设置容器宽度
       ,arrow: 'always'
       ,height:'298'
       ,indicator:'none'
@@ -228,7 +229,7 @@ layui.config({
   carousel.render(option);
     var option = {
       elem: '#test2'
-      ,width: '1100' //设置容器宽度
+      ,width: 'auto' //设置容器宽度
       ,arrow: 'always'
       ,height:'480'
       //,indicator:'none'

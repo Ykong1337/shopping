@@ -11,15 +11,15 @@ spring:
     username: root
     password: 123456
     url: jdbc:mysql://localhost:3306/shoppingmall?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    type: com.alibaba.druid.pool.DruidDataSource
 #thymeleaf配置
   thymeleaf:
     cache: false
-
 #配置日志
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    #配置逻辑删除
+#配置逻辑删除
   global-config:
     db-config:
       logic-delete-value: 1

@@ -24,7 +24,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="OrderItem对象", description="")
+@ApiModel(value="OrderItem对象", description="OrderItem对象")
 public class Cart implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -51,11 +51,11 @@ public class Cart implements Serializable {
     private String img;
 
     @ApiModelProperty(value = "创建时间")
-    @TableField(fill = FieldFill.INSERT)
+//    @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
 
     @ApiModelProperty(value = "更新时间")
-    @TableField(fill = FieldFill.INSERT_UPDATE)
+//    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtUpdate;
 
 }

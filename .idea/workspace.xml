@@ -28,7 +28,269 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42076d9f-d435-473c-a20a-3c5143853258" name="Default Changelist" comment="目前为第一版" />
+    <list default="true" id="42076d9f-d435-473c-a20a-3c5143853258" name="Default Changelist" comment="略微改动">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shopping-mall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopping-mall.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/ShoppingMallApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/ShoppingMallApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/config/MyMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/config/MyMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/entity/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/ShoppingMallApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/config/JackSonConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/config/LoginHandlerInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/config/MyMvcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/config/MybatisPlusConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/CartController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/FileController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/IorderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/ItemCatController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/ItemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/OrderDetailController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/OrderShippingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/RoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/controller/UserRoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/Cart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/Iorder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/ItemCat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/OrderDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/OrderShipping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/entity/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/enums/ResultEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/exception/MailException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/handler/MyMetaObjectHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/CartMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/IorderMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/ItemCatMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/ItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/OrderDetailMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/OrderShippingMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/RoleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/mapper/UserRoleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/CartService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/IorderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/ItemCatService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/ItemService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/OrderDetailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/OrderShippingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/RoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/UserRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/CartServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/IorderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/ItemCatServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/ItemServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/OrderDetailServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/OrderShippingServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/RoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/UserRoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/utils/UploadUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/vo/DataVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/vo/ItemVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mall/vo/UserVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/file.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/theme1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/theme2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/theme3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/theme4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/theme5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/theme6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/xadmin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/fonts/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/RTV.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/a1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/iphone-12-pro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/mi10.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/mi11.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/miTvwebp.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/miY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/note 9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/note9 4G.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/note9.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/redmi note9.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/redmi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/redmi9P.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/redmiTV.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/s_img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/us_icon1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/us_icon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/us_icon3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/util/car.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/util/mm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/xadmin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/xcity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/cate-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/cate-view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/cate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/item-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/item-view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/item.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/member-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/member-del.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/member-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/member-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/member.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/order-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/order-detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/order-view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/person.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/ship-view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/ship.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/back/welcome1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/cat-result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/commodity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/information.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/my-order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/ship-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/ship.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/shopcart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mall/single.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mall/CodeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mall/ShoppingMallApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ysh/YshgitApplicationTests.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,9 +311,14 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\environment\mavenRepository" />
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\apache-maven-3.6.3-bin\apache-maven-3.6.3" />
         <option name="userSettingsFile" value="C:\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="disabledProfiles">
+      <list>
+        <option value="staples" />
+      </list>
     </option>
   </component>
   <component name="ProjectId" id="1mf2kYy2XstQ2Tv7yJAsP2QWqhW" />
@@ -68,10 +335,12 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/resources/static/css" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -117,15 +386,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -258,6 +525,9 @@
       <workItem from="1612438526491" duration="7535000" />
       <workItem from="1612496359711" duration="11905000" />
       <workItem from="1612520256172" duration="1034000" />
+      <workItem from="1615881196691" duration="1514000" />
+      <workItem from="1615882794854" duration="4005000" />
+      <workItem from="1615948189775" duration="2975000" />
     </task>
     <task id="LOCAL-00001" summary="目前为第一版">
       <created>1612518542716</created>
@@ -306,141 +576,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="目前为第一版" />
     <MESSAGE value="第一版" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一版" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="361" y="70" width="1089" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611983700141">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="70" width="1089" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611983700141" />
-    <state x="492" y="201" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612519720761">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="492" y="201" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1612519720761" />
-    <state x="574" y="115" key="#com.intellij.ide.util.MemberChooser" timestamp="1612443983828">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="115" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612443983828" />
-    <state x="505" y="201" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1609872497945">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="505" y="201" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1609872497945" />
-    <state x="374" y="328" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1610116410317">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="374" y="328" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1610116410317" />
-    <state x="543" y="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1610116411695">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="543" y="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1610116411695" />
-    <state x="500" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612158536201">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="500" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1612158536201" />
-    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612346603904">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612346603904" />
-    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1612519316409">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612519316409" />
-    <state x="147" y="65" key="DiffContextDialog" timestamp="1612519658365">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1612519658365" />
-    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1610721928013">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610721928013" />
-    <state width="1493" height="80" key="GridCell.Tab.0.bottom" timestamp="1612513188874">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612513188874" />
-    <state width="1493" height="80" key="GridCell.Tab.0.center" timestamp="1612513188874">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612513188874" />
-    <state width="1493" height="80" key="GridCell.Tab.0.left" timestamp="1612513188874">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612513188874" />
-    <state width="1493" height="80" key="GridCell.Tab.0.right" timestamp="1612513188874">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612513188874" />
-    <state width="1493" height="80" key="GridCell.Tab.1.bottom" timestamp="1612513188874">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="80" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612513188874" />
-    <state width="1493" height="80" key="GridCell.Tab.1.center" timestamp="1612513188874">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="80" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612513188874" />
-    <state width="1493" height="80" key="GridCell.Tab.1.left" timestamp="1612513188874">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="80" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612513188874" />
-    <state width="1493" height="80" key="GridCell.Tab.1.right" timestamp="1612513188874">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="80" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612513188874" />
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1609934164090">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1609934164090" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1612320799023">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612320799023" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1612519690535">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612519690535" />
-    <state x="565" y="189" key="chooseDestDirectoryDialog" timestamp="1612144878464">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="565" y="189" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1612144878464" />
-    <state x="543" y="220" width="449" height="377" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1612245968916">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="543" y="220" width="449" height="377" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1536.824@0.0.1536.824" timestamp="1612245968916" />
-    <state x="592" y="176" width="497" height="472" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1612261653821">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="592" y="176" width="497" height="472" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1612261653821" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1612521442489">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1612521442489" />
-    <state x="572" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612519408833">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="572" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1612519408833" />
-    <state x="540" y="218" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1610818697513">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="540" y="218" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1610818697513" />
-    <state x="306" y="66" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1610904387988">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="306" y="66" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1610904387988" />
-    <state x="0" y="0" width="603" height="824" key="find.popup" timestamp="1610640055942">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="0" y="0" width="603" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1610640055942" />
-    <state x="467" y="162" key="refactoring.ChangeSignatureDialog" timestamp="1612270788336">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="467" y="162" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1612270788336" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1612149065393">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1612149065393" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1612516109646">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1612516109646" />
+    <MESSAGE value="略微改动" />
+    <option name="LAST_COMMIT_MESSAGE" value="略微改动" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

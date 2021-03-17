@@ -2,6 +2,7 @@ package com.mall.controller;
 
 
 import com.mall.entity.Cart;
+import com.mall.entity.Item;
 import com.mall.entity.User;
 import com.mall.service.CartService;
 import com.mall.service.ItemService;
@@ -53,10 +54,14 @@ public class CartController {
     }
 
     @RequestMapping("/delCart/{id}")
-    @ApiOperation("清空购物车")
+    @ApiOperation("删除购物车不想买的商品")
     public String delCart(@PathVariable("id") Long id) {
         System.out.println(id);
+        final Cart cart = cartService.selectById(id);
+        final Item item = itemService.selectByItemId(cart.getItemId());
+        item.setNum(item.getNum()+cart.getNum());
         cartService.delCart(id);
+        itemService.update(item);
         return "redirect:/toCart";
     }
 

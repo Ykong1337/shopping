@@ -65,6 +65,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements Ca
 
     @Override
     public boolean delCart(Long id) {
+
         cartMapper.deleteById(id);
         return true;
     }

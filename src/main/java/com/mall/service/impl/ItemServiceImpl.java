@@ -49,6 +49,12 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements It
     }
 
     @Override
+    public Item selectByItemId(Long id) {
+        return itemMapper.selectById(id);
+
+    }
+
+    @Override
     public void insert(Item item) {
         itemMapper.insert(item);
     }

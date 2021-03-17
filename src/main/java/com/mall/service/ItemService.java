@@ -31,6 +31,13 @@ public interface ItemService extends IService<Item> {
     public ItemVo selectById(Long id);
 
     /**
+     * 根据ID查询
+     * @param id
+     * @return
+     */
+    public Item selectByItemId(Long id);
+
+    /**
      * 通过名字模糊查询
      *
      * @return

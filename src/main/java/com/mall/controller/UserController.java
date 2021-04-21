@@ -53,28 +53,32 @@ public class UserController {
 
     @RequestMapping("/addUser")
     @ResponseBody
-    public boolean add(@RequestBody User user) {
-        System.out.println(user);
-        userService.add(user);
-
-        return true;
+    public DataVo add(@RequestBody User user) {
+        if (user != null) {
+            userService.add(user);
+            return new DataVo(200, "数据添加成功");
+        }
+        return new DataVo(400, "请求失败");
     }
 
     @RequestMapping("/deleteUser")
     @ResponseBody
-    public boolean delUser(String ids) {
+    public DataVo delUser(String ids) {
         System.out.println(ids);
         final List<String> idList = Arrays.asList(ids.split(","));
         for (String id : idList) {
             userService.deleteById(Long.parseLong(id));
         }
-        return true;
+        return new DataVo(200,"数据删除成功");
     }
     @RequestMapping("/updateUser")
     @ResponseBody
-    public boolean updateUser(@RequestBody User user) {
-        userService.updateUser(user);
-        return true;
+    public DataVo updateUser(@RequestBody User user) {
+        if (user != null) {
+            userService.updateUser(user);
+            return new DataVo(200,"数据修改成功");
+        }
+        return new DataVo(400,"请求失败");
     }
 
     /**

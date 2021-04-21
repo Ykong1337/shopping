@@ -57,25 +57,17 @@ public class IorderController {
 
     }
 
-    @RequestMapping("addOrder")
-    @ApiOperation("添加订单")
-    @ResponseBody
-    public boolean addOrder(@RequestBody Iorder iorder) {
-        orderService.createOrder(iorder);
-        return true;
-    }
-
     @RequestMapping("delOrder")
     @ApiOperation("删除订单")
     @ResponseBody
-    public boolean delOrder(String ids) {
+    public DataVo delOrder(String ids) {
         System.out.println(ids);
         final List<String> idList = Arrays.asList(ids.split(","));
         for (String id : idList) {
             orderService.delOrder(Long.parseLong(id));
             orderDetailService.delDetailByOrderId(Long.parseLong(id));//订单删除时，详情表中的数据随之删除
         }
-        return true;
+        return new DataVo(200,"数据删除成功");
     }
 
     @RequestMapping("delOrder1/{id}")
@@ -90,12 +82,13 @@ public class IorderController {
     @RequestMapping("/updateOrder")
     @ApiOperation("更新订单")
     @ResponseBody
-    public boolean updateOrder(@RequestBody Iorder iorder) {
+    public DataVo updateOrder(@RequestBody Iorder iorder) {
         System.out.println(iorder);
         if (iorder != null) {
             orderService.updateOrder(iorder);
+            return new DataVo(200,"数据修改成功");
         }
-        return true;
+        return new DataVo(400,"请求失败");
     }
 
     @RequestMapping("/createOrder")

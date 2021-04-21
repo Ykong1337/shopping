@@ -92,24 +92,14 @@
                         type:"post",
                         data:{'ids':ids},
                         success:function(res){
-                            if (res==1){
-                                layer.msg("删除成功",{
-                                    iocn:6,
-                                    time:500
-                                },function(){
+                            if (res.code == 200) {
+                                layer.msg(res.msg, {icon: 6, time: 500}, function () {
                                     parent.window.location.reload();
-                                    var iframIndex=parent.layer.getFrameIndex(window.name);
+                                    var iframIndex = parent.layer.getFrameIndex(window.name);
                                     parent.layer.close(iframIndex);
                                 });
-                            }else if (res == 0) {
-                                layer.msg("删除失败",{
-                                    iocn:6,
-                                    time:500
-                                },function(){
-                                    parent.window.location.reload();
-                                    var iframIndex=parent.layer.getFrameIndex(window.name);
-                                    parent.layer.close(iframIndex);
-                                });
+                            } else {
+                                layer.msg("删除失败", {icon: 5, time: 500})
                             }
 
                         }

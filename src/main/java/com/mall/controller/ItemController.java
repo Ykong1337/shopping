@@ -48,36 +48,35 @@ public class ItemController {
 
     @RequestMapping("/add")
     @ResponseBody
-    public boolean add(@RequestBody Item item) {
+    public DataVo add(@RequestBody Item item) {
         if (item != null) {
             System.out.println(item);
             System.out.println(item.getCid());
             itemService.insert(item);
-        } else {
-            System.out.println("未接收到数据!");
+            return new DataVo(200,"数据添加成功");
         }
-        return true;
+        return new DataVo(400,"请求失败");
     }
 
     @RequestMapping("/deleteByIds")
     @ResponseBody
-    public boolean del(String ids) {
+    public DataVo del(String ids) {
         System.out.println(ids);
         final List<String> idList = Arrays.asList(ids.split(","));
         for (String id : idList) {
             itemService.deleteByIds(Long.parseLong(id));
         }
 
-        return true;
+        return new DataVo(200,"数据删除成功");
     }
 
     @RequestMapping("/update")
     @ResponseBody
-    public boolean update(@RequestBody Item item) {
+    public DataVo update(@RequestBody Item item) {
         System.out.println(item);
         System.out.println((item.getSellPoint()));
         itemService.update(item);
-        return true;
+        return new DataVo(200,"数据修改成功");
     }
 
     /**

@@ -9,7 +9,7 @@
 
 #### 安装教程
 
-1.  xxxx
+1.  git clone下载或者直接下载
 2.  xxxx
 3.  xxxx
 

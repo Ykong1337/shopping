@@ -41,25 +41,31 @@ public class OrderShippingController {
 
     @RequestMapping("/updateShip")
     @ResponseBody
-    public boolean updateShip(@RequestBody OrderShipping orderShipping) {
-        orderShippingService.update(orderShipping);
-        return true;
+    public DataVo updateShip(@RequestBody OrderShipping orderShipping) {
+        if (orderShipping != null) {
+            orderShippingService.update(orderShipping);
+            return new DataVo(200,"数据修改成功");
+        }
+        return new DataVo(400,"请求失败");
     }
     @RequestMapping("/delShip")
     @ResponseBody
-    public boolean delShip(String ids) {
+    public DataVo delShip(String ids) {
         System.out.println(ids);
         final List<String> idList = Arrays.asList(ids.split(","));
         for (String id : idList) {
             orderShippingService.del(Long.parseLong(id));
         }
-        return true;
+        return new DataVo(200, "数据删除成功");
     }
     @RequestMapping("/addShip")
     @ResponseBody
-    public boolean addShip(@RequestBody OrderShipping orderShipping) {
-        orderShippingService.addShip(orderShipping);
-        return true;
+    public DataVo addShip(@RequestBody OrderShipping orderShipping) {
+        if (orderShipping != null) {
+            orderShippingService.addShip(orderShipping);
+            return new DataVo(200,"数据添加成功");
+        }
+        return new DataVo(400,"请求失败");
     }
 
     @RequestMapping("/toShip")

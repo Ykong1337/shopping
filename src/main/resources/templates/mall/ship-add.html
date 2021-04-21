@@ -145,12 +145,12 @@
                         data:JSON.stringify(data.field),
                         contentType:"application/json",
                         success: function (res) {
-                            if (res = true) {
-                                layer.alert("修改成功", {icon: 1}, function() {
+                            if (res.code = 200) {
+                                layer.alert(res.msg, {icon: 1}, function() {
                                     window.location = "/toCreateOrder";
                                 });
                             }else {
-                                layer.alert("修改失败,请稍后再试", {icon: 5}, function() {
+                                layer.alert(res.msg, {icon: 5}, function() {
                                     window.location = "/toCart";
                                 });
                             }

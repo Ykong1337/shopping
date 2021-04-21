@@ -30,10 +30,27 @@
   <component name="ChangeListManager">
     <list default="true" id="42076d9f-d435-473c-a20a-3c5143853258" name="Default Changelist" comment="略微改动">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/IorderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/IorderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/ItemCatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/ItemCatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/OrderShippingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/OrderShippingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/vo/DataVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/DataVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/cate-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/cate-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/cate-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/cate-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/cate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/cate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/item-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/item-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/member-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/member-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/member-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/member-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/member.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/order-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/order-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/order-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/ship-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/ship-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/ship.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/ship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/ship-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/ship-add.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +73,7 @@
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\environment\mavenRepository" />
         <option name="mavenHome" value="C:\apache-maven-3.6.3-bin\apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="C:\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="userSettingsFile" value="C:\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="disabledProfiles">
@@ -130,13 +147,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -272,6 +291,7 @@
       <workItem from="1615881196691" duration="1514000" />
       <workItem from="1615882794854" duration="4005000" />
       <workItem from="1615948189775" duration="6781000" />
+      <workItem from="1618994273696" duration="4028000" />
     </task>
     <task id="LOCAL-00001" summary="目前为第一版">
       <created>1612518542716</created>

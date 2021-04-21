@@ -30,10 +30,12 @@ import java.util.List;
 public class ItemCatController {
     @Autowired
     private ItemCatService itemCatService;
+
     @RequestMapping("/toCate")
     public String toCate(){
         return "back/cate";
     }
+
     @RequestMapping("cate")
     @ResponseBody
     public DataVo<ItemCat> show(Integer page, Integer limit) {
@@ -42,26 +44,31 @@ public class ItemCatController {
 
     @RequestMapping("/addCate")
     @ResponseBody
-    public boolean addCate(@RequestBody ItemCat itemCat) {
-        itemCatService.add(itemCat);
-        return true;
+    public DataVo addCate(@RequestBody ItemCat itemCat) {
+        if (itemCat != null) {
+            itemCatService.add(itemCat);
+            return new DataVo(200, "数据添加成功");
+        }
+        return new DataVo(400, "请求失败·");
     }
     @RequestMapping("/updateCate")
     @ResponseBody
-    public boolean updateCate(@RequestBody ItemCat itemCat) {
-        System.out.println(itemCat);
-        itemCatService.update(itemCat);
-        return true;
+    public DataVo updateCate(@RequestBody ItemCat itemCat) {
+        if (itemCat != null) {
+            itemCatService.update(itemCat);
+            return new DataVo(200, "数据修改成功");
+        }
+        return new DataVo(400, "请求失败·");
     }
     @RequestMapping("delCate")
     @ResponseBody
-    public boolean delCate(String ids) {
+    public DataVo delCate(String ids) {
         System.out.println(ids);
         final List<String> idList = Arrays.asList(ids.split(","));//将字符串转为列表
         for (String id : idList) {
             itemCatService.delById(Long.parseLong(id));
         }
-        return true;
+        return new DataVo(200,"数据删除成功");
     }
     /**
      * 跳转界面

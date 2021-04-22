@@ -20,13 +20,14 @@
 
             <a href="/toMyOrder" th:if="${session.user!=null}"><i class="layui-icon layui-icon-about"></i>关于我的</a>
 
+            <a href="/back" th:if="${session.user!=null&&session.user.getIdentity()==1}"><i class="layui-icon layui-icon-about"></i>我的后台管理</a>
         </p>
         <div style="float: right;padding-right: 60px;">
             <div class="login" th:if="${session.user==null}">
                 <a  href="/login" ><i class="layui-icon layui-icon-user"></i>登录</a>
             </div>
             <div class="login" th:if="${session.user!=null}">欢迎回来！
-                <a th:text="${session.user.getUserName()}" style="color: red"></a>&nbsp;
+                <a href="/toMyOrder" th:text="${session.user.getUserName()}" style="color: red"></a>&nbsp;
                 <a href="/logout"><i class="layui-icon layui-icon-close-fill"></i>注销</a>
             </div>
 

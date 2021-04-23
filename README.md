@@ -9,9 +9,9 @@
 
 #### 安装教程
 
-1.  git clone下载或者直接下载
-2.  xxxx
-3.  xxxx
+1.  git clone下载或者直接下载，在mysql中创建shoppingmall数据库，将sql文件导入运行
+2.  将项目导入到IDEA中，等待maven下载相关jar包
+3.  运行启动类，浏览器输入http://localhost:8001即可运行
 
 #### 使用说明
 

@@ -43,14 +43,19 @@ public class CartController {
         cart.setUserId(user.getId());
         cart.setItemId(itemId);
         cart.setNum(num);
-        try {
-            if (cartService.addCart(cart)) {
-                return "redirect:toCart";
+        //判断库存是否还有
+        final Item item = itemService.selectByItemId(itemId);
+        if (item.getNum() > 0) {
+            try {
+                if (cartService.addCart(cart)) {
+                    return "redirect:toCart";
+                }
+            } catch (Exception e) {
+                return "redirect:items";
             }
-        } catch (Exception e) {
-            return "redirect:items";
         }
-        return null;
+
+        return "redirect:/";
     }
 
     @RequestMapping("/delCart/{id}")

@@ -15,11 +15,15 @@
 
 
 <div class="header">
+
   <div class="headerLayout w1200">
     <div class="headerCon">
-      <h1 class="mallLogo">
-        <a href="/">Gee商城</a>
-      </h1>
+      <div style="float: left;">
+        <h1 style="font-size: 30px">
+          <a href="/">Gee商城</a>
+        </h1>
+      </div>
+
       <div class="mallSearch">
         <form action="/toResult" class="layui-form" method="post" novalidate>
           <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input" placeholder="请输入需要的商品">
@@ -61,10 +65,10 @@
         </div>
       </div>
       <div class="category-banner">
-        <div class="w1200">
+        <div class="w1200" style="height: 400px">
 <!--          <img src="../../static/img/redmi.jpg" style="width: 100%; height: auto;">-->
-          <div class="layui-carousel" id="test2" style="margin-left: 200px;">
-            <div carousel-item style="width: 100%;">
+          <div class="layui-carousel" id="test2" style="margin-left: 200px;width: auto;height: 400px;">
+            <div carousel-item style="width: 100%;height: 400px">
               <a th:href="@{/toMore/4}"><img src="../../static/img/mi10.webp" style="width: 100%; height: auto;"></a>
               <a th:href="@{/toMore/3}"><img src="../../static/img/note9.webp" style="width: 100%; height: auto;"></a>
               <a th:href="@{/toMore/1350432252611985409}"><img src="../../static/img/redmi.jpg" style="width: 100%; height: auto;"></a>
@@ -127,64 +131,6 @@
         </div>
       </div>
     </div>
-
-<!--    <div class="product-cont w1200" id="product-cont">-->
-
-<!--      <div class="product-item product-item1 layui-clear">-->
-<!--        <div class="left-title">-->
-<!--          <h4><i>1F</i></h4>-->
-<!--          <img src="">-->
-<!--          <h5>手机推荐</h5>-->
-<!--        </div>-->
-<!--        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==1&&item1.getStatus()==1}">-->
-<!--          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">-->
-<!--            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="product-item product-item2 layui-clear">-->
-<!--        <div class="left-title">-->
-<!--          <h4><i>2F</i></h4>-->
-<!--          <img src="">-->
-<!--          <h5>电脑推荐</h5>-->
-<!--        </div>-->
-<!--        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==2&&item1.getStatus()==1}">-->
-<!--          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">-->
-<!--            <img th:src="'img/'+${item1.getImage()}" style="width: 260px; height: 200px;" alt="">-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="product-item product-item3 layui-clear">-->
-<!--        <div class="left-title">-->
-<!--          <h4><i>3F</i></h4>-->
-<!--          <img src="">-->
-<!--          <h5>电视产品</h5>-->
-<!--        </div>-->
-<!--        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==4&&item1.getStatus()==1}">-->
-<!--          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">-->
-<!--            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="product-item product-item3 layui-clear">-->
-<!--        <div class="left-title">-->
-<!--          <h4><i>4F</i></h4>-->
-<!--          <img src="">-->
-<!--          <h5>相机产品</h5>-->
-<!--        </div>-->
-<!--        <div class="right-cont" th:each="item1:${list}" th:if="${item1.getCid()==3&&item1.getStatus()==1}">-->
-<!--          <a th:href="@{/toMore/}+${item1.getId()}" class="top-img">-->
-<!--            <img th:src="'img/'+${item1.getImage()}" style="width: 200px; height: 200px;" alt="">-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--    </div>-->
-
-
   </div>
 
   <div class="footer">
@@ -223,7 +169,7 @@ layui.config({
       elem: '#test1'
       ,width: 'auto' //设置容器宽度
       ,arrow: 'always'
-      ,height:'298'
+      ,height:'300'
       ,indicator:'none'
     }
   carousel.render(option);
@@ -232,7 +178,7 @@ layui.config({
       ,width: 'auto' //设置容器宽度
       ,arrow: 'always'
       ,height:'480'
-      //,indicator:'none'
+      ,indicator:'none'
     }
   carousel.render(option);
 });

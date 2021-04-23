@@ -29,7 +29,7 @@ public class LoginController {
             return "redirect:/";
         } else {
 //            model.addAttribute("msg", "账号或密码错误！");
-            return "/login";
+            return "mall/login";
         }
     }
 

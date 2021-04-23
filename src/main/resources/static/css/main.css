@@ -23,7 +23,7 @@ i{font-style: normal;}
 
 /*header*/
 .header{height: 100px; line-height: 100px;}
-.header .mallLogo{margin-left: 38px; float: left;}
+.header .mallLogo{ float: left;}
 .header .mallSearch{float: right; width: 500px; padding-top: 30px; position: relative;}
 .header .mallSearch form{height: 38px; line-height: 38px; border-width: 1px 0 1px 1px; border: solid #11977d33; position: relative;}
 .header .mallSearch input{height: 38px; line-height: 38px; width: 436px; float: left; border:none; position: relative; z-index: 2; background: none;}
@@ -274,9 +274,9 @@ i{font-style: normal;}
 
 
 /*login*/
-.login-content .login-bg{width: 100%; background: url(../img/load_bg.jpg) no-repeat; background-size: cover;}
+.login-content .login-bg{width: 100%; background: url(../../static/img/bj.png) no-repeat; background-size: cover;}
 .login-content .login-bg .login-cont{ height: 772px; position: relative;}
-.login-content .login-bg .login-cont .form-box{width: 300px; height: 390px; border:1px solid #d9dadc; background: #fff; position: absolute; top: 196px; right: 90px; padding:0 30px;}
+.login-content .login-bg .login-cont .form-box{width: 300px; height: 390px; border:1px solid #d9dadc; background: #fff; position: absolute; top: 100px; right: 90px; padding:0 30px;}
 .login-content .login-bg .login-cont .form-box legend{font-size: 20px; color: #323232; text-align: center; padding:50px 0;}
 .login-content .login-bg .login-cont .layui-inline,.login-content .login-bg .login-cont .layui-input-inline{width: 100%; position: relative;}
 .login-content .login-bg .login-cont .layui-input-inline .iphone-icon{position: absolute; top: 8px; left: 10px; color: #d3d3d3; font-size: 20px;}

@@ -1,42 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="../res/static/css/main.css">
-  <link rel="stylesheet" type="text/css" href="../res/layui/css/layui.css">
-  <script type="text/javascript" src="../res/layui/layui.js"></script>
+  <title>Gee商场</title>
+  <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="../../static/lib/layui/css/layui.css">
+  <script type="text/javascript" src="../../static/lib/layui/layui.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 </head>
 <body>
 
-  <div class="site-nav-bg">
-    <div class="site-nav w1200">
-      <p class="sn-back-home">
-        <i class="layui-icon layui-icon-home"></i>
-        <a href="#">首页</a>
-      </p>
-      <div class="sn-quick-menu">
-        <div class="login"><a href="login.html">登录</a></div>
-        <div class="sp-cart"><a href="shopcart.html">购物车</a><span>2</span></div>
-      </div>
-    </div>
-  </div>
+<th:block th:include="common.html :: nav"></th:block>
 
 
 
   <div class="header">
     <div class="headerLayout w1200">
       <div class="headerCon">
-        <h1 class="mallLogo">
-          <a href="/">Gee商城</a>
-        </h1>
+        <div style="float: left;">
+          <h1 style="font-size: 30px">
+            <a href="/">Gee商城</a>
+          </h1>
+        </div>
         <div class="mallSearch">
           <form action="/toResult" class="layui-form" method="post" novalidate>
             <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input" placeholder="请输入需要的商品">
             <button class="layui-btn" lay-submit lay-filter="formDemo">
-                <i class="layui-icon layui-icon-search"></i>
+              <i class="layui-icon layui-icon-search"></i>
             </button>
             <input type="hidden" name="" value="">
           </form>
@@ -51,10 +42,9 @@
       <div class="inner-cont0">
         <div class="inner-cont1 w1200">
           <div class="inner-cont2">
-            <a href="commodity.html" class="active">所有商品</a>
-            <a href="buytoday.html">今日团购</a>
-            <a href="information.html">母婴资讯</a>
-            <a href="about.html">关于我们</a>
+            <a href="/toAllItem" class="active">所有商品</a>
+            <a href="/toInformation">电子产品资讯</a>
+            <a href="/toAbout">关于我们</a>
           </div>
         </div>
       </div>
@@ -62,25 +52,25 @@
     <div class="login-bg">
       <div class="login-cont w1200">
         <div class="form-box">
-          <form class="layui-form" action="">
-            <legend>手机号登录</legend>
+          <form class="layui-form" action="/login" method="post">
+            <legend>请登录</legend>
             <div class="layui-form-item">
-              <div class="layui-inline iphone">
+              <div class="layui-inline">
                 <div class="layui-input-inline">
-                  <i class="layui-icon layui-icon-cellphone iphone-icon"></i>
-                  <input type="tel" name="phone" id="phone" lay-verify="required|phone" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                  <i class="layui-icon layui-icon-username"></i>
+                  <input type="text"  name="uname" id="uname" lay-verify="required|uname" placeholder="请输入登录账号" autocomplete="off" class="layui-input ">
                 </div>
               </div>
               <div class="layui-inline veri-code">
                 <div class="layui-input-inline">
-                  <input id="pnum" type="text" name="pnum" lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input">
-                  <input type="button" class="layui-btn" id="find"  value="验证码" /> 
+                  <i class="layui-icon layui-icon-password"></i>
+                  <input id="password" type="password" name="password" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input ">
                 </div>
               </div>
             </div>
             <div class="layui-form-item login-btn">
               <div class="layui-input-block">
-                <button class="layui-btn" lay-submit="" lay-filter="demo1" onclick="return false">登录</button>
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">登录</button>
               </div>
             </div>
           </form>
@@ -107,11 +97,11 @@
         <span>|</span>
         <a href="javascript:;">售后服务</a>
         <span>|</span>
-        <a href="javascript:;">母婴资讯</a>
+        <a href="javascript:;">电子产品资讯</a>
         <span>|</span>
         <a href="javascript:;">关于货源</a>
       </p>
-      <p class="coty">母婴商城版权所有 &copy; 2012-2020</p>
+      <p class="coty">Gee商城版权所有 &copy; 2012-2020</p>
     </div>
   </div>
   <script type="text/javascript">
@@ -121,49 +111,20 @@
           var $ = layui.$,form = layui.form;
 
 
-        $("#find").click(function() {
-            if(!/^1\d{10}$/.test($("#phone").val())){
-              layer.msg("请输入正确的手机号");
-              return false;
-            }
-            var obj=this;
-            $.ajax({
-                type:"get",
-                url:"../json/login.json",
-                dataType:"json",//返回的
-                success:function(data) {
-                    
-                    if(data.result){
-                        $("#find").addClass(" layui-btn-disabled");
-                        $('#find').attr('disabled',"true");
-                        settime(obj);
-                        $("#msg").text(data.msg);
-                    }else{
-                        layer.msg(data.msg);
-                    }
-                },
-                error:function(msg) {
-                    console.log(msg);
-                }
-            }); 
-        })
-        var countdown=60; 
-        function settime(obj) { 
-        if (countdown == 0) { 
-            obj.removeAttribute("disabled"); 
-            obj.classList.remove("layui-btn-disabled")
-            obj.value="获取验证码"; 
-            countdown = 60; 
-            return;
-        } else { 
-            
-            obj.value="重新发送(" + countdown + ")"; 
-            countdown--; 
-        } 
-        setTimeout(function() { 
-            settime(obj) }
-            ,1000) 
-        }
+     //自定义验证规则
+     form.verify({
+       uname: function(value) {
+         if (value.length == "") {
+           return '请输入账号!';
+         }
+       }
+       password: function (value) {
+         if (value.length == "") {
+           return"请输入密码!"
+         }
+       }
+     });
+
     })
   </script>
 

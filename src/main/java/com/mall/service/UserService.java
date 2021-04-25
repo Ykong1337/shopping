@@ -24,6 +24,8 @@ public interface UserService extends IService<User> {
 
     public UserVo selectById(Long id);
 
+    public User select(String uname, String password);
+
     public User selectByUserId(Long id);
 
     public void add(User user);
@@ -31,4 +33,5 @@ public interface UserService extends IService<User> {
     public void deleteById(Long id);
 
     public void updateUser(User user);
+
 }

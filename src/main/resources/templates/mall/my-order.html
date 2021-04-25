@@ -60,24 +60,24 @@
                 <legend>账号信息</legend>
             </fieldset>
             <form class="layui-form">
-                <input type="hidden" name="id" th:value="${session.user.getId()}">
+                <input type="hidden" name="id" th:value="${user.getId()}">
                 <div class="layui-form-item">
                     <div class="layui-inline">
                         <label class="layui-form-label">账号</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="uname" th:value="${session.user.getUname()}" autocomplete="off" class="layui-input">
+                            <input type="text" name="uname" th:value="${user.getUname()}" autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">密码</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="password" th:value="${session.user.getPassword()}" autocomplete="off" class="layui-input">
+                            <input type="text" name="password" th:value="${user.getPassword()}" autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">用户名</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="userName" th:value="${session.user.getUserName()}" autocomplete="off" class="layui-input" >
+                            <input type="text" name="userName" th:value="${user.getUserName()}" autocomplete="off" class="layui-input" >
                         </div>
                     </div>
                 </div>
@@ -87,19 +87,19 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">邮箱</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="email" th:value="${session.user.getEmail()}" autocomplete="off" class="layui-input" >
+                            <input type="text" name="email" th:value="${user.getEmail()}" autocomplete="off" class="layui-input" >
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">联系方式</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="mobile" th:value="${session.user.getMobile()}" autocomplete="off" class="layui-input" >
+                            <input type="text" name="mobile" th:value="${user.getMobile()}" autocomplete="off" class="layui-input" >
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">地址</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="adress" th:value="${session.user.getAdress()}" autocomplete="off" class="layui-input">
+                            <input type="text" name="adress" th:value="${user.getAdress()}" autocomplete="off" class="layui-input">
                         </div>
                     </div>
                 </div>
@@ -128,16 +128,24 @@
                 </tr>
                 <tr th:each="order:${orderList}" style="height: 100px;">
                     <td style="width: 400px;">
-                        <span th:text="${order.getId()}"></span>
+                        <a th:href="@{/toOrderDetail/}+${order.getId()}">
+                            <span th:text="${order.getId()}"></span>
+                        </a>
                     </td>
                     <td style="width: 200px;">
-                        <span th:text="${order.getBuyerNick()}"></span>
+                        <a th:href="@{/toOrderDetail/}+${order.getId()}">
+                            <span th:text="${order.getBuyerNick()}"></span>
+                        </a>
                     </td>
                     <td style="width: 200px;" >
-                        <span th:text="${order.getAddress()}"></span>
+                        <a th:href="@{/toOrderDetail/}+${order.getId()}">
+                            <span th:text="${order.getAddress()}"></span>
+                        </a>
                     </td>
                     <td style="width: 200px;" >
-                        ￥<span th:text="${order.getPayment()}" class="totalCost"></span>
+                        <a th:href="@{/toOrderDetail/}+${order.getId()}">
+                            ￥<span th:text="${order.getPayment()}" class="totalCost"></span>
+                        </a>
                     </td>
                     <td style="width:150px;">
                         <a class="layui-btn layui-btn-danger" id="del" th:href="@{/delOrder1/}+${order.getId()}"><i class="layui-icon layui-icon-delete"></i>删除</a>
@@ -216,19 +224,22 @@
                         url:'/updateUser',
                         type:"post",
                         dataType:"json",
+                        async:true,
                         data:JSON.stringify(data.field),
                         contentType:"application/json",
-
+                        success:function (res) {
+                            if (res.code == 200) {
+                                layer.msg(res.msg, {icon: 6, time: 500}, function () {
+                                    parent.window.location.reload();
+                                    var iframIndex = parent.layer.getFrameIndex(window.name);
+                                    parent.layer.close(iframIndex);
+                                });
+                            } else {
+                                layer.msg(res.msg,{icon: 5});
+                            }
+                        }
                     });
-                    layer.alert("修改成功", {
-                        icon: 6
-                    }, function() {
-                        //关闭当前frame
-                        xadmin.close();
 
-                        // 可以对父窗口进行刷新
-                        xadmin.father_reload();
-                    });
                     return false;
                 });
 

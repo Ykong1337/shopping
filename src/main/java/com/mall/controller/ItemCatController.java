@@ -2,7 +2,10 @@ package com.mall.controller;
 
 
 import com.mall.entity.ItemCat;
+import com.mall.entity.Oplog;
+import com.mall.entity.User;
 import com.mall.service.ItemCatService;
+import com.mall.service.OplogService;
 import com.mall.vo.DataVo;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,6 +35,8 @@ import java.util.List;
 public class ItemCatController {
     @Autowired
     private ItemCatService itemCatService;
+    @Autowired
+    private OplogService oplogService;
 
     @RequestMapping("/toCate")
     public String toCate(){
@@ -44,29 +51,46 @@ public class ItemCatController {
 
     @RequestMapping("/addCate")
     @ResponseBody
-    public DataVo addCate(@RequestBody ItemCat itemCat) {
+    public DataVo addCate(@RequestBody ItemCat itemCat, HttpSession session, HttpServletRequest request) {
+        Oplog oplog = new Oplog();
         if (itemCat != null) {
             itemCatService.add(itemCat);
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("添加分类数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
             return new DataVo(200, "数据添加成功");
         }
         return new DataVo(400, "请求失败·");
     }
     @RequestMapping("/updateCate")
     @ResponseBody
-    public DataVo updateCate(@RequestBody ItemCat itemCat) {
+    public DataVo updateCate(@RequestBody ItemCat itemCat, HttpSession session, HttpServletRequest request) {
+        Oplog oplog = new Oplog();
         if (itemCat != null) {
             itemCatService.update(itemCat);
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("修改分类数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
             return new DataVo(200, "数据修改成功");
         }
         return new DataVo(400, "请求失败·");
     }
     @RequestMapping("delCate")
     @ResponseBody
-    public DataVo delCate(String ids) {
-        System.out.println(ids);
+    public DataVo delCate(String ids, HttpSession session, HttpServletRequest request) {
+        Oplog oplog = new Oplog();
         final List<String> idList = Arrays.asList(ids.split(","));//将字符串转为列表
         for (String id : idList) {
             itemCatService.delById(Long.parseLong(id));
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("删除ID为"+id+"的分类数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
         }
         return new DataVo(200,"数据删除成功");
     }

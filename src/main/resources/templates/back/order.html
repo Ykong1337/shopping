@@ -91,8 +91,8 @@
                         ,{field:'buyerNick', title:'买家昵称', width:120}
                         ,{field:'address', title:'地址', width:120}
                         ,{field:'payment', title:'实付金额', width:100, sort: true, totalRow: true}
-                        ,{field:'createTime', title:'订单创建时间', width:150,templet: "<div>{{layui.util.toDateString(d.ordertime, 'yyyy-MM-dd HH:mm:ss')}}</div>"}
-                        ,{field:'updateTime', title:'订单更新时间', width:150,templet: "<div>{{layui.util.toDateString(d.ordertime, 'yyyy-MM-dd HH:mm:ss')}}</div>"}
+                        ,{field:'createTime', title:'订单创建时间', width:150,templet: "<div>{{layui.util.toDateString(d.createTime, 'yyyy-MM-dd HH:mm:ss')}}</div>"}
+                        ,{field:'updateTime', title:'订单更新时间', width:150,templet: "<div>{{layui.util.toDateString(d.updateTime, 'yyyy-MM-dd HH:mm:ss')}}</div>"}
 						,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:250}
                     ]
                 ]

@@ -37,11 +37,9 @@ public class Iorder implements Serializable {
 
 
     @ApiModelProperty(value = "订单创建时间")
-    //@TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     @ApiModelProperty(value = "订单更新时间")
-    //@TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     @ApiModelProperty(value = "用户id")

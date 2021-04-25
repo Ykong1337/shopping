@@ -1,8 +1,10 @@
 package com.mall.controller;
 
 
+import com.mall.entity.Oplog;
 import com.mall.entity.Role;
 import com.mall.entity.User;
+import com.mall.service.OplogService;
 import com.mall.service.RoleService;
 import com.mall.service.UserService;
 import com.mall.vo.DataVo;
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 import java.util.List;
@@ -33,6 +36,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private OplogService oplogService;
 
     @RequestMapping("/toUser")
     public String toUser(){
@@ -53,9 +58,15 @@ public class UserController {
 
     @RequestMapping("/addUser")
     @ResponseBody
-    public DataVo add(@RequestBody User user) {
+    public DataVo add(@RequestBody User user, HttpServletRequest request, HttpSession session) {
+        Oplog oplog = new Oplog();
         if (user != null) {
             userService.add(user);
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("新增用户数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
             return new DataVo(200, "数据添加成功");
         }
         return new DataVo(400, "请求失败");
@@ -63,19 +74,30 @@ public class UserController {
 
     @RequestMapping("/deleteUser")
     @ResponseBody
-    public DataVo delUser(String ids) {
-        System.out.println(ids);
+    public DataVo delUser(String ids, HttpServletRequest request, HttpSession session) {
+        Oplog oplog = new Oplog();
         final List<String> idList = Arrays.asList(ids.split(","));
         for (String id : idList) {
             userService.deleteById(Long.parseLong(id));
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("删除操作日志中第" + id + "条数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
         }
         return new DataVo(200,"数据删除成功");
     }
     @RequestMapping("/updateUser")
     @ResponseBody
-    public DataVo updateUser(@RequestBody User user) {
+    public DataVo updateUser(@RequestBody User user, HttpServletRequest request, HttpSession session) {
+        Oplog oplog = new Oplog();
         if (user != null) {
             userService.updateUser(user);
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("修改用户数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
             return new DataVo(200,"数据修改成功");
         }
         return new DataVo(400,"请求失败");

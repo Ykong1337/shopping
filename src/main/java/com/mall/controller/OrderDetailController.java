@@ -36,5 +36,12 @@ public class OrderDetailController {
         model.addAttribute("detailList", detailList);
         return "back/order-detail";
     }
+
+    @RequestMapping("/toOrderDetail/{orderId}")
+    public String toOrderDetail(@PathVariable("orderId") Long orderId, Model model) {
+        final List<OrderDetail> orderDetailList = orderDetailService.selectByOrderId(orderId);
+        model.addAttribute("orderDetailList", orderDetailList);
+        return "mall/orderDetail";
+    }
 }
 

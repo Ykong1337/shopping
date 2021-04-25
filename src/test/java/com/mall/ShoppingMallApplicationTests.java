@@ -3,6 +3,7 @@ package com.mall;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mall.entity.*;
 import com.mall.mapper.*;
+import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -97,4 +98,5 @@ class ShoppingMallApplicationTests {
         //用于查看路径是否正确
         System.out.println(realPath);
     }
+
 }

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -39,6 +40,10 @@ public class IorderController {
     private OrderDetailService orderDetailService;
     @Autowired
     private ItemService itemService;
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private OplogService oplogService;
     /**
      * 跳转
      */
@@ -52,40 +57,53 @@ public class IorderController {
     @ApiOperation("订单分页列表")
     @ResponseBody
     public DataVo<Iorder> selectList(Integer page, Integer limit) {
-
         return orderService.selectList(page, limit);
-
     }
 
     @RequestMapping("delOrder")
     @ApiOperation("删除订单")
     @ResponseBody
-    public DataVo delOrder(String ids) {
-        System.out.println(ids);
+    public DataVo delOrder(String ids, HttpSession session, HttpServletRequest request) {
         final List<String> idList = Arrays.asList(ids.split(","));
+        Oplog oplog = new Oplog();
         for (String id : idList) {
             orderService.delOrder(Long.parseLong(id));
             orderDetailService.delDetailByOrderId(Long.parseLong(id));//订单删除时，详情表中的数据随之删除
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("删除订单号为：" + id + "的所有数据(包括订单表和订单详情表)");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
         }
         return new DataVo(200,"数据删除成功");
     }
 
     @RequestMapping("delOrder1/{id}")
     @ApiOperation("删除订单1")
-    public String delOrder1(@PathVariable("id") Long id) {
-        System.out.println(id);
+    public String delOrder1(@PathVariable("id") Long id,HttpSession session,HttpServletRequest request) {
+        Oplog oplog = new Oplog();
         orderService.delOrder(id);
         orderDetailService.delDetailByOrderId(id);
+        oplog.setIp(request.getRemoteAddr());
+        oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+        oplog.setOpEvent("删除订单号为：" + id + "的所有数据(包括订单表和订单详情表)");
+        oplog.setOpStatus(1);
+        oplogService.add(oplog);
         return "redirect:/toMyOrder";
     }
 
     @RequestMapping("/updateOrder")
     @ApiOperation("更新订单")
     @ResponseBody
-    public DataVo updateOrder(@RequestBody Iorder iorder) {
-        System.out.println(iorder);
+    public DataVo updateOrder(@RequestBody Iorder iorder,HttpSession session,HttpServletRequest request) {
+        Oplog oplog = new Oplog();
         if (iorder != null) {
             orderService.updateOrder(iorder);
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("更新订单号为："+iorder.getId()+"的数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
             return new DataVo(200,"数据修改成功");
         }
         return new DataVo(400,"请求失败");
@@ -93,8 +111,9 @@ public class IorderController {
 
     @RequestMapping("/createOrder")
     @ApiOperation("前台下单")
-    public String createOrder(HttpSession session, BigDecimal cost) {
+    public String createOrder(HttpSession session,Model model, BigDecimal cost,HttpServletRequest request) {
         User user = (User) session.getAttribute("user");
+        Oplog oplog = new Oplog();
         final OrderShipping shipping = orderShippingService.selectByUserId(user.getId());//查询出地址信息
         Iorder iorder = new Iorder();
         iorder.setUserId(user.getId());//为订单赋予用户ID
@@ -112,13 +131,21 @@ public class IorderController {
             orderDetail.setCost((itemVo.getPrice()).multiply(BigDecimal.valueOf(cart.getNum())));//为订单详情赋予金额信息
             orderDetailService.addOrderDetail(orderDetail);
             cartService.delCart(cart.getId());
+            //日志
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("购买了"+itemVo.getTitle()+",数量为："+cart.getNum());
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
         }
-        return "redirect:/toMyOrder";
+        model.addAttribute("orderId", iorder.getId());
+        return "mall/order-success";
     }
 
     /**
      * 跳转
      */
+
     @RequestMapping("/toAddOrder")
     @ApiOperation("后台前往订单添加页面")
     public String toAddOrder() {
@@ -147,7 +174,9 @@ public class IorderController {
     @ApiOperation("前台前往我的订单页面")
     public String toMyOrder(HttpSession session, Model model) {
         User user = (User) session.getAttribute("user");
+        User user1 = userService.selectByUserId(user.getId());
         final List<Iorder> orderList = orderService.selectByUserId(user.getId());
+        model.addAttribute("user", user1);
         model.addAttribute("orderList", orderList);
         return "mall/my-order";
     }

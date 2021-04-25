@@ -45,10 +45,8 @@ public class OrderShipping implements Serializable {
     @ApiModelProperty(value = "邮政编码,如：310001")
     private String receiverZip;
 
-    @TableField(fill = FieldFill.INSERT)
     private Date created;
 
-    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updated;
 
 

@@ -73,6 +73,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
+    public User select(String uname, String password) {
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.eq("uname", uname);
+        wrapper.eq("password", password);
+        return userMapper.selectOne(wrapper);
+    }
+
+    @Override
     public User selectByUserId(Long id) {
         final User user = userMapper.selectById(id);
         return user;

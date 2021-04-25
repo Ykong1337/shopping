@@ -95,11 +95,6 @@
                                     <i class="iconfont nav_right">&#xe697;</i></a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a onclick="xadmin.add_tab('用户添加','toAddUser')">
-                                            <i class="iconfont">&#xe6a7;</i>
-                                            <cite>用户添加</cite></a>
-                                    </li>
-                                    <li>
                                         <a onclick="xadmin.add_tab('地址管理','/toShip')">
                                             <i class="iconfont">&#xe6a7;</i>
                                             <cite>地址管理</cite></a>
@@ -157,6 +152,25 @@
                                 <a onclick="xadmin.add_tab('分类列表','/toCate')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>分类列表</cite></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;">
+                            <i class="iconfont left-nav-li" lay-tips="日志管理">&#xe723;</i>
+                            <cite>日志管理</cite>
+                            <i class="iconfont nav_right">&#xe697;</i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a onclick="xadmin.add_tab('操作日志列表','/oplog/toOplog')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>操作日志列表</cite></a>
+                            </li>
+                            <li>
+                                <a onclick="xadmin.add_tab('登录日志列表','/log/toLog')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>登录日志列表</cite></a>
                             </li>
                         </ul>
                     </li>

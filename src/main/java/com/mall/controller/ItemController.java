@@ -3,8 +3,11 @@ package com.mall.controller;
 
 import com.mall.entity.Item;
 import com.mall.entity.ItemCat;
+import com.mall.entity.Oplog;
+import com.mall.entity.User;
 import com.mall.service.ItemCatService;
 import com.mall.service.ItemService;
+import com.mall.service.OplogService;
 import com.mall.vo.DataVo;
 import com.mall.vo.ItemVo;
 import io.swagger.annotations.Api;
@@ -14,6 +17,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 import java.util.List;
 
@@ -32,7 +37,8 @@ public class ItemController {
     private ItemService itemService;
     @Autowired
     private ItemCatService itemCatService;
-
+    @Autowired
+    private OplogService oplogService;
     /**
      * 前后端分离
      *
@@ -48,11 +54,16 @@ public class ItemController {
 
     @RequestMapping("/add")
     @ResponseBody
-    public DataVo add(@RequestBody Item item) {
+    public DataVo add(@RequestBody Item item, HttpServletRequest request, HttpSession session) {
+        Oplog oplog = new Oplog();
         if (item != null) {
-            System.out.println(item);
-            System.out.println(item.getCid());
             itemService.insert(item);
+            //日志
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("新增商品数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
             return new DataVo(200,"数据添加成功");
         }
         return new DataVo(400,"请求失败");
@@ -60,11 +71,17 @@ public class ItemController {
 
     @RequestMapping("/deleteByIds")
     @ResponseBody
-    public DataVo del(String ids) {
-        System.out.println(ids);
+    public DataVo del(String ids, HttpServletRequest request, HttpSession session) {
+        Oplog oplog = new Oplog();
         final List<String> idList = Arrays.asList(ids.split(","));
         for (String id : idList) {
             itemService.deleteByIds(Long.parseLong(id));
+            //日志
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("删除ID为："+id+"的商品数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
         }
 
         return new DataVo(200,"数据删除成功");
@@ -72,11 +89,19 @@ public class ItemController {
 
     @RequestMapping("/update")
     @ResponseBody
-    public DataVo update(@RequestBody Item item) {
-        System.out.println(item);
-        System.out.println((item.getSellPoint()));
-        itemService.update(item);
-        return new DataVo(200,"数据修改成功");
+    public DataVo update(@RequestBody Item item, HttpServletRequest request, HttpSession session) {
+        Oplog oplog = new Oplog();
+        if (item != null) {
+            itemService.update(item);
+            //日志
+            oplog.setIp(request.getRemoteAddr());
+            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+            oplog.setOpEvent("修改商品数据");
+            oplog.setOpStatus(1);
+            oplogService.add(oplog);
+            return new DataVo(200,"数据修改成功");
+        }
+        return new DataVo(400, "请求失败");
     }
 
     /**
@@ -108,7 +133,7 @@ public class ItemController {
         model.addAttribute("select", select);
         return "back/item-view";
     }
-
+    
     @RequestMapping("/toMore/{id}")
     public String toMore(@PathVariable("id") Long id, Model model) {
         final ItemVo itemVo = itemService.selectById(id);
@@ -147,11 +172,19 @@ public class ItemController {
      * 查询结果页
      */
     @RequestMapping("/toResult")
-    public String toResult(String title, Model model) {
+    public String toResult(String title, Model model, HttpServletRequest request, HttpSession session) {
+        Oplog oplog = new Oplog();
         final List<Item> itemList = itemService.selectLikeName(title);
         model.addAttribute("itemList", itemList);
         final List<ItemCat> cats = itemCatService.select();
         model.addAttribute("cats", cats);
+        //日志
+        oplog.setIp(request.getRemoteAddr());
+        oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+        oplog.setOpEvent("查询名为"+title+"的数据");
+        oplog.setOpStatus(1);
+        oplogService.add(oplog);
+
         return "mall/result";
     }
     /**

@@ -1,5 +1,9 @@
 package com.mall.config;
 
+import com.mall.entity.Log;
+import com.mall.entity.User;
+import com.mall.service.LogService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -10,13 +14,14 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //登陆成功之后，应该有用户的session
-        final Object user = request.getSession().getAttribute("user");
+        final User user = (User) request.getSession().getAttribute("user");
         if (user == null) {//未登录
             request.setAttribute("msg","请先登录");
             request.getRequestDispatcher("/login").forward(request,response);
             return false;
+        }else {
+            return true;
         }
-        return true;
     }
 
     @Override

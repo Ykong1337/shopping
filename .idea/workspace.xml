@@ -28,28 +28,40 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42076d9f-d435-473c-a20a-3c5143853258" name="Default Changelist" comment="拦截普通用户能够进入后台">
+    <list default="true" id="42076d9f-d435-473c-a20a-3c5143853258" name="Default Changelist" comment="优化">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_caspar_chen_swagger_ui_layer_1_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a94c768f-10c9-4bfd-91c2-5d046d9312ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a94c768f-10c9-4bfd-91c2-5d046d9312ad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shopping-mall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopping-mall.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/config/LoginHandlerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/config/LoginHandlerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/config/SwaggerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/IorderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/IorderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/ItemCatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/ItemCatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/layui/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lib/layui/css/layui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/member-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/member-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/cat-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/cat-result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/commodity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/commodity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/information.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/information.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/OrderDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/OrderDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/OrderShippingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/OrderShippingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/entity/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/entity/Iorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/entity/Iorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/entity/OrderShipping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/entity/OrderShipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/handler/MyMetaObjectHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/member.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/ship.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/ship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/back/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/back/welcome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/my-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/my-order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/ship-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/ship-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/ship.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/ship.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/shopcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/shopcart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mall/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mall/single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mall/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mall/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mall/ShoppingMallApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mall/ShoppingMallApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +71,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -92,6 +104,9 @@
       </list>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1mf2kYy2XstQ2Tv7yJAsP2QWqhW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -111,7 +126,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/resources/static/css" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql文件" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -122,6 +137,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.55697674" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
@@ -168,22 +184,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShoppingMallApplicationTests.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shopping-mall" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mall.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mall" />
-      <option name="MAIN_CLASS_NAME" value="com.mall.ShoppingMallApplicationTests" />
-      <option name="METHOD_NAME" value="test5" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ShoppingMallApplicationTests.test6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shopping-mall" />
       <extension name="coverage">
@@ -216,6 +216,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShoppingMallApplicationTests.test8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping-mall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mall.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mall" />
+      <option name="MAIN_CLASS_NAME" value="com.mall.ShoppingMallApplicationTests" />
+      <option name="METHOD_NAME" value="test8" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShoppingMallApplication " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="shopping-mall" />
       <extension name="coverage">
@@ -234,18 +250,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.CodeGenerator" />
-      <item itemvalue="JUnit.ShoppingMallApplicationTests.test5" />
       <item itemvalue="JUnit.ShoppingMallApplicationTests.test6" />
       <item itemvalue="JUnit.ShoppingMallApplicationTests.test7" />
+      <item itemvalue="JUnit.ShoppingMallApplicationTests.test8" />
       <item itemvalue="Spring Boot.ShoppingMallApplication " />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ShoppingMallApplication " />
-        <item itemvalue="JUnit.ShoppingMallApplicationTests.test7" />
         <item itemvalue="Application.CodeGenerator" />
+        <item itemvalue="JUnit.ShoppingMallApplicationTests.test8" />
+        <item itemvalue="JUnit.ShoppingMallApplicationTests.test7" />
         <item itemvalue="JUnit.ShoppingMallApplicationTests.test6" />
-        <item itemvalue="JUnit.ShoppingMallApplicationTests.test5" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +317,9 @@
       <workItem from="1615948189775" duration="6781000" />
       <workItem from="1618994273696" duration="4028000" />
       <workItem from="1619083611580" duration="2141000" />
-      <workItem from="1619139647306" duration="13607000" />
+      <workItem from="1619139647306" duration="19965000" />
+      <workItem from="1619166109189" duration="5539000" />
+      <workItem from="1619314930790" duration="19148000" />
     </task>
     <task id="LOCAL-00001" summary="目前为第一版">
       <created>1612518542716</created>
@@ -331,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619084139610</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="优化">
+      <created>1619156865277</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619156865277</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +391,8 @@
     <MESSAGE value="第一版" />
     <MESSAGE value="略微改动" />
     <MESSAGE value="拦截普通用户能够进入后台" />
-    <option name="LAST_COMMIT_MESSAGE" value="拦截普通用户能够进入后台" />
+    <MESSAGE value="优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

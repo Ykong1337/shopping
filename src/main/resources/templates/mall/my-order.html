@@ -109,7 +109,7 @@
                     <button class="layui-btn" lay-filter="edit" lay-submit="">修改</button>
                 </div>
             </form>
-
+            <hr>
             <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
                 <legend>我的历史订单信息</legend>
             </fieldset>
@@ -119,6 +119,7 @@
                     <td>购买人</td>
                     <td>地址</td>
                     <td>小计</td>
+                    <td>下单时间</td>
                     <td>操作</td>
                 </tr>
                 <tr th:if="${orderList.size()==0}" style="height: 150px;">
@@ -126,8 +127,8 @@
                         <h1>您的订单列表空空如也，快去<a href="/toAllItem" style="color: red">购物吧！</a></h1>
                     </td>
                 </tr>
-                <tr th:each="order:${orderList}" style="height: 100px;">
-                    <td style="width: 400px;">
+                <tr th:each="order:${orderList}" style="height: 100px;" >
+                    <td style="width: 200px;">
                         <a th:href="@{/toOrderDetail/}+${order.getId()}">
                             <span th:text="${order.getId()}"></span>
                         </a>
@@ -145,6 +146,11 @@
                     <td style="width: 200px;" >
                         <a th:href="@{/toOrderDetail/}+${order.getId()}">
                             ￥<span th:text="${order.getPayment()}" class="totalCost"></span>
+                        </a>
+                    </td>
+                    <td style="width: 200px;" >
+                        <a th:href="@{/toOrderDetail/}+${order.getId()}">
+                            <span th:text="${#dates.format(order.getCreateTime(),'yyyy-MM-dd HH:mm:ss')}" class="totalCost"></span>
                         </a>
                     </td>
                     <td style="width:150px;">
@@ -187,7 +193,7 @@
             <span>|</span>
             <a href="javascript:;">售后服务</a>
             <span>|</span>
-            <a href="javascript:;">母婴资讯</a>
+            <a href="javascript:;">电子产品资讯</a>
             <span>|</span>
             <a href="javascript:;">关于货源</a>
         </p>

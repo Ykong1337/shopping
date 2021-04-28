@@ -60,9 +60,9 @@ public class ItemCatController {
             oplog.setOpEvent("添加分类数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200, "数据添加成功");
+            return DataVo.add();
         }
-        return new DataVo(400, "请求失败·");
+        return DataVo.empty();
     }
     @RequestMapping("/updateCate")
     @ResponseBody
@@ -75,9 +75,9 @@ public class ItemCatController {
             oplog.setOpEvent("修改分类数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200, "数据修改成功");
+            return DataVo.update();
         }
-        return new DataVo(400, "请求失败·");
+        return DataVo.empty();
     }
     @RequestMapping("delCate")
     @ResponseBody
@@ -92,7 +92,7 @@ public class ItemCatController {
             oplog.setOpStatus(1);
             oplogService.add(oplog);
         }
-        return new DataVo(200,"数据删除成功");
+        return DataVo.del();
     }
     /**
      * 跳转界面

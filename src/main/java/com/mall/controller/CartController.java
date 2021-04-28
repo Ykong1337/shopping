@@ -83,8 +83,8 @@ public class CartController {
         Oplog oplog = new Oplog();
         final Cart cart = cartService.selectById(id);
         final Item item = itemService.selectByItemId(cart.getItemId());
-        item.setNum(item.getNum()+cart.getNum());
         cartService.delCart(id);
+        item.setNum(item.getNum()+cart.getNum());
         //日志
         oplog.setIp(request.getRemoteAddr());
         oplog.setOpUser(((User) session.getAttribute("user")).getUname());

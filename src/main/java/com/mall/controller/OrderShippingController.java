@@ -47,17 +47,20 @@ public class OrderShippingController {
     @RequestMapping("/updateShip")
     @ResponseBody
     public DataVo updateShip(@RequestBody OrderShipping orderShipping, HttpServletRequest request, HttpSession session) {
-        Oplog oplog = new Oplog();
+        System.out.println(orderShipping);
+        System.out.println("------------"+orderShipping.getReceiverZip());
         if (orderShipping != null) {
+            Oplog oplog = new Oplog();
             orderShippingService.update(orderShipping);
+
             oplog.setIp(request.getRemoteAddr());
             oplog.setOpUser(((User) session.getAttribute("user")).getUname());
             oplog.setOpEvent("更新地址信息");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200,"数据修改成功");
+            return DataVo.update();
         }
-        return new DataVo(400,"请求失败");
+        return DataVo.empty();
     }
     @RequestMapping("/delShip")
     @ResponseBody
@@ -72,22 +75,22 @@ public class OrderShippingController {
             oplog.setOpStatus(1);
             oplogService.add(oplog);
         }
-        return new DataVo(200, "数据删除成功");
+        return DataVo.del();
     }
     @RequestMapping("/addShip")
     @ResponseBody
     public DataVo addShip(@RequestBody OrderShipping orderShipping, HttpServletRequest request, HttpSession session) {
-        Oplog oplog = new Oplog();
         if (orderShipping != null) {
+            Oplog oplog = new Oplog();
             orderShippingService.addShip(orderShipping);
             oplog.setIp(request.getRemoteAddr());
             oplog.setOpUser(((User) session.getAttribute("user")).getUname());
             oplog.setOpEvent("新增地址信息");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200,"数据添加成功");
+            return DataVo.add();
         }
-        return new DataVo(400,"请求失败");
+        return DataVo.empty();
     }
 
     @RequestMapping("/toShip")
@@ -98,7 +101,6 @@ public class OrderShippingController {
 
     @RequestMapping("/toUpdateShip")
     public String toUpdateShip(Long id, Model model) {
-        System.out.println(id);
         final OrderShipping shipping = orderShippingService.selectById(id);
         model.addAttribute("shipping", shipping);
         return "back/ship-view";

@@ -64,9 +64,9 @@ public class ItemController {
             oplog.setOpEvent("新增商品数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200,"数据添加成功");
+            return DataVo.add();
         }
-        return new DataVo(400,"请求失败");
+        return DataVo.empty();
     }
 
     @RequestMapping("/deleteByIds")
@@ -84,7 +84,7 @@ public class ItemController {
             oplogService.add(oplog);
         }
 
-        return new DataVo(200,"数据删除成功");
+        return DataVo.del();
     }
 
     @RequestMapping("/update")
@@ -99,9 +99,9 @@ public class ItemController {
             oplog.setOpEvent("修改商品数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200,"数据修改成功");
+            return DataVo.update();
         }
-        return new DataVo(400, "请求失败");
+        return DataVo.empty();
     }
 
     /**

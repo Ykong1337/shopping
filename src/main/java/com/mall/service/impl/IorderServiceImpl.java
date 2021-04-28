@@ -43,6 +43,7 @@ public class IorderServiceImpl extends ServiceImpl<IorderMapper, Iorder> impleme
     public List<Iorder> selectByUserId(Long userId) {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("user_id", userId);
+        wrapper.orderByDesc("create_time");
         final List list = iOrderMapper.selectList(wrapper);
         return list;
     }

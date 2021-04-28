@@ -75,7 +75,7 @@ public class IorderController {
             oplog.setOpStatus(1);
             oplogService.add(oplog);
         }
-        return new DataVo(200,"数据删除成功");
+        return DataVo.del();
     }
 
     @RequestMapping("delOrder1/{id}")
@@ -104,9 +104,9 @@ public class IorderController {
             oplog.setOpEvent("更新订单号为："+iorder.getId()+"的数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200,"数据修改成功");
+            return DataVo.update();
         }
-        return new DataVo(400,"请求失败");
+        return DataVo.empty();
     }
 
     @RequestMapping("/createOrder")
@@ -121,6 +121,7 @@ public class IorderController {
         iorder.setAddress(shipping.getReceiverAddress());//为订单赋予地址
         iorder.setPayment(cost);//为订单赋予总金额
         orderService.addOrder(iorder);//创建订单
+        System.out.println("订单号为："+iorder.getId());
         final List<Cart> cartList = cartService.selectListByUserId(user.getId());//查询出购物车列表
         OrderDetail orderDetail = new OrderDetail();
         for (Cart cart : cartList) {

@@ -5,6 +5,7 @@ import com.mall.entity.Log;
 import com.mall.entity.User;
 import com.mall.service.LogService;
 import com.mall.service.UserService;
+import eu.bitwalker.useragentutils.UserAgent;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Locale;
+
 @Api("登录控制类")
 @Controller
 public class LoginController {
@@ -24,6 +27,7 @@ public class LoginController {
     @RequestMapping("/login")
     public String login(String uname, String password, HttpSession session, Model model, HttpServletRequest request) {
         User user = userService.select(uname, password);
+        UserAgent userAgent = UserAgent.parseUserAgentString(request.getHeader("user-agent"));
         Log log = new Log();
         if (user != null) {
             user.setStatus(1);
@@ -34,7 +38,7 @@ public class LoginController {
             if (uname != null) {
                 log.setUsername(uname);
                 log.setIp(request.getRemoteAddr());
-                log.setBrowser(request.getHeader("user-agent"));
+                log.setBrowser((userAgent.getBrowser().toString()).toLowerCase());
                 log.setOs(System.getProperty("os.name"));
                 log.setStatus(1);
                 logService.add(log);
@@ -46,7 +50,7 @@ public class LoginController {
             if (uname != null) {
                 log.setUsername(uname);
                 log.setIp(request.getRemoteAddr());
-                log.setBrowser(request.getHeader("user-agent"));
+                log.setBrowser((userAgent.getBrowser().toString()).toLowerCase());
                 log.setOs(System.getProperty("os.name")+System.getProperty("os.version"));
                 log.setStatus(0);
                 logService.add(log);

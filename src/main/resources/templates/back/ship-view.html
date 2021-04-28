@@ -55,11 +55,12 @@
                 <label for="L_email" class="layui-form-label">
                     <span class="x-red">*</span>邮政编码</label>
                 <div class="layui-input-inline">
-                    <input type="text" class="layui-input" name="receiverZip" th:value="${shipping.getReceiverZip()}"></div>
+                    <input type="text" class="layui-input" name="receiverZip" th:value="${shipping.getReceiverZip()}">
+                </div>
             </div>
             <div class="layui-form-item">
                 <label for="L_repass" class="layui-form-label"></label>
-                <button class="layui-btn" lay-filter="add" lay-submit="">编辑</button>
+                <button class="layui-btn" lay-filter="edit" lay-submit="">编辑</button>
             </div>
         </form>
     </div>
@@ -78,17 +79,9 @@
             var form = layui.form,
                 layer = layui.layer;
 
-            //自定义验证规则
-            form.verify({
-                order_id: function(value) {
-                    if (value.length == "") {
-                        return '请填写订单号!';
-                    }
-                }
-            });
 
             //监听提交
-            form.on('submit(add)',
+            form.on('submit(edit)',
                 function(data) {
                     $.ajax({
                         url:'/updateShip',
@@ -112,6 +105,7 @@
                                     xadmin.father_reload();
                                 });
                             }
+                        }
                     });
                     return false;
                 });

@@ -55,9 +55,9 @@ public class OplogController {
                 oplog.setOpStatus(1);
                 oplogService.add(oplog);
             }
-            return new DataVo(200,"数据删除成功");
+            return DataVo.del();
         }
-        return new DataVo(400,"请求失败");
+        return DataVo.error();
     }
 
 }

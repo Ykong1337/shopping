@@ -64,5 +64,11 @@ public interface ItemService extends IService<Item> {
      */
     public void update(Item item);
 
+    /**
+     * 通过分类ID查询商品信息
+     * @param cid
+     * @return
+     */
     List<Item> selectListByCid(Long cid);
+
 }

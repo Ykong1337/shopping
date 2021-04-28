@@ -20,7 +20,7 @@
 
             <a href="/toMyOrder" th:if="${session.user!=null}"><i class="layui-icon layui-icon-about"></i>关于我的</a>
 
-            <a href="/back" th:if="${session.user!=null&&session.user.getIdentity()==1}"><i class="layui-icon layui-icon-about"></i>我的后台管理</a>
+            <a href="/back" th:if="${session.user!=null&&session.user.getIdentity()==1}"><i class="layui-icon layui-icon-set-sm"></i>我的后台管理</a>
         </p>
         <div style="float: right;padding-right: 60px;">
             <div class="login" th:if="${session.user==null}">

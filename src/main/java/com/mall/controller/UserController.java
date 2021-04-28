@@ -67,9 +67,9 @@ public class UserController {
             oplog.setOpEvent("新增用户数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200, "数据添加成功");
+            return DataVo.add();
         }
-        return new DataVo(400, "请求失败");
+        return DataVo.empty();
     }
 
     @RequestMapping("/deleteUser")
@@ -85,7 +85,7 @@ public class UserController {
             oplog.setOpStatus(1);
             oplogService.add(oplog);
         }
-        return new DataVo(200,"数据删除成功");
+        return DataVo.del();
     }
     @RequestMapping("/updateUser")
     @ResponseBody
@@ -98,9 +98,9 @@ public class UserController {
             oplog.setOpEvent("修改用户数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return new DataVo(200,"数据修改成功");
+            return DataVo.update();
         }
-        return new DataVo(400,"请求失败");
+        return DataVo.empty();
     }
 
     /**

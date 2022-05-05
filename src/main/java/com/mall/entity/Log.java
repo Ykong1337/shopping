@@ -1,22 +1,22 @@
 package com.mall.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.Version;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
  * 登录日志表
  * </p>
  *
- * @author Gee
- * @since 2021-04-25
+ * @author Ykong
+ *
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

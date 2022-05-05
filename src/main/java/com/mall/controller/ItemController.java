@@ -27,8 +27,8 @@ import java.util.List;
  * 商品表 前端控制器
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 @Api("商品控制类")
 @Controller

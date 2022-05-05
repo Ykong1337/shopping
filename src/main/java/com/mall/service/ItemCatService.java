@@ -12,8 +12,8 @@ import java.util.List;
  * 商品类目 服务类
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 public interface ItemCatService extends IService<ItemCat> {
     public DataVo<ItemVo> selectList(Integer page,Integer limit);

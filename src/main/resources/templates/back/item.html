@@ -106,7 +106,7 @@
                         ,{field:'num', title:'库存', width:80,  sort: true}
                         ,{field:'limitNum', title:'最大售卖', width:80}
                         ,{field:'image', title:'图片',width:80,templet :function(res){
-							return '<img style="height: 30px;width: 30px;" src="img/'+res.image+'"/>'
+							return '<img style="height: 30px;width: 30px;" src="../../static/img/'+res.image+'"/>'
 						}}
                         ,{field:'name', title:'所属分类', width:100}
                         ,{field:'status', title:'状态', width:80, align: 'center',templet : function(data) {// 替换数据
@@ -230,6 +230,6 @@
 		   
     });
 </script>
-
+</body>
 
 </html>

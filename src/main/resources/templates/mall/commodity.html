@@ -20,7 +20,7 @@
       <div class="headerCon">
         <div style="float: left;">
           <h1 style="font-size: 30px">
-            <a href="/">Gee商城</a>
+            <a href="/">恒信电子</a>
           </h1>
         </div>
         <div class="mallSearch">
@@ -67,7 +67,7 @@
             <div class="cont-list layui-clear" id="list-cont">
               <div class="item" th:each="item:${itemList}" th:if="${item.getStatus()!=0}">
                 <div class="img">
-                  <a th:href="@{/toMore/}+${item.getId()}"><img th:src="'img/'+${item.getImage()}" style="height: 280px;width: 280px;"></a>
+                  <a th:href="@{/toMore/}+${item.getId()}"><img th:src="'../../static/img/'+${item.getImage()}" style="height: 280px;width: 280px;"></a>
                 </div>
                 <div class="text">
                   <a th:href="@{/toMore/}+${item.getId()}"><p class="title" th:text="${item.getTitle()}"></p></a>

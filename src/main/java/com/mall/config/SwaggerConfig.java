@@ -2,40 +2,32 @@ package com.mall.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
-import org.springframework.core.env.Profiles;
-import org.springframework.web.context.request.async.DeferredResult;
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
-import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.util.ArrayList;
-
 @EnableSwagger2
 @Configuration
 public class SwaggerConfig {
+
     @Bean
-    public Docket ProductApi() {
-    return new Docket(DocumentationType.SWAGGER_2)
-                        .genericModelSubstitutes(DeferredResult.class)
-                        .useDefaultResponseMessages(false)
-                        .forCodeGeneration(false)
-                        .pathMapping("/")
-                        .select()
-                        .build()
-                        .apiInfo(productApiInfo());
+    public Docket getUserDocket(){
+        ApiInfo apiInfo=new ApiInfoBuilder()
+                .title("Swagger-UI")//api标题
+                .description("测试接口")//api描述
+                .version("1.0.0")//版本号
+                .contact("Ykong")//本API负责人的联系信息
+                .build();
+        return new Docket(DocumentationType.SWAGGER_2)//文档类型（swagger2）
+                .apiInfo(apiInfo)//设置包含在json ResourceListing响应中的api元信息
+                .select()//启动用于api选择的构建器
+                .apis(RequestHandlerSelectors.any())//扫描接口的包
+                .paths(PathSelectors.any())//路径过滤器（扫描所有路径）
+                .build();
     }
-    private ApiInfo productApiInfo() {
-        ApiInfo apiInfo = new ApiInfo("Gee电子产品销售系统数据接口文档",
-                "文档描述。。。",
-                "1.0.0",
-                "API TERMS URL",
-                "2289249101@qq.com",
-                "license",
-                "license url");
-        return apiInfo;
-    }
+
 }

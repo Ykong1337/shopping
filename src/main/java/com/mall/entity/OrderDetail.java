@@ -1,23 +1,23 @@
 package com.mall.entity;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.Version;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * <p>
  * 
  * </p>
  *
- * @author Gee
- * @since 2021-02-02
+ * @author Ykong
+ *
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

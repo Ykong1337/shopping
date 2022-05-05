@@ -10,8 +10,8 @@ import java.util.List;
  *  服务类
  * </p>
  *
- * @author Gee
- * @since 2021-02-02
+ * @author Ykong
+ *
  */
 public interface OrderDetailService extends IService<OrderDetail> {
     public void updateOrderDetail(OrderDetail orderDetail);

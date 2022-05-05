@@ -1,22 +1,17 @@
 package com.mall.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mall.entity.Item;
 import com.mall.entity.ItemCat;
 import com.mall.mapper.ItemCatMapper;
 import com.mall.mapper.ItemMapper;
 import com.mall.service.ItemService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mall.vo.DataVo;
 import com.mall.vo.ItemVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -24,13 +19,13 @@ import java.util.List;
  * 商品表 服务实现类
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 @Service
 public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements ItemService {
     @Autowired
-     private ItemMapper itemMapper;
+    private ItemMapper itemMapper;
     @Autowired
     private ItemCatMapper itemCatMapper;
     public List<Item> select() {
@@ -84,8 +79,6 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements It
 
     /**
      * 根据商品名称模糊查询
-     * @param page
-     * @param limit
      * @param title
      * @return
      */

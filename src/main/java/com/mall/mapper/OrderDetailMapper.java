@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  *  Mapper 接口
  * </p>
  *
- * @author Gee
- * @since 2021-02-02
+ * @author Ykong
+ *
  */
 public interface OrderDetailMapper extends BaseMapper<OrderDetail> {
 

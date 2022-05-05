@@ -1,8 +1,7 @@
 package com.mall.service;
 
-import com.mall.entity.Log;
-import com.mall.entity.Oplog;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.mall.entity.Oplog;
 import com.mall.vo.DataVo;
 
 /**
@@ -10,8 +9,8 @@ import com.mall.vo.DataVo;
  * 操作日志表 服务类
  * </p>
  *
- * @author Gee
- * @since 2021-04-25
+ * @author Ykong
+ *
  */
 public interface OplogService extends IService<Oplog> {
     public DataVo<Oplog> selectList(Integer page, Integer limit);

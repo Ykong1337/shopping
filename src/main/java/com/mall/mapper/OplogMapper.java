@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 操作日志表 Mapper 接口
  * </p>
  *
- * @author Gee
- * @since 2021-04-25
+ * @author Ykong
+ *
  */
 public interface OplogMapper extends BaseMapper<Oplog> {
 

@@ -15,8 +15,8 @@ import java.util.List;
  *  服务实现类
  * </p>
  *
- * @author Gee
- * @since 2021-01-17
+ * @author Ykong
+ *
  */
 @Service
 public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements RoleService {

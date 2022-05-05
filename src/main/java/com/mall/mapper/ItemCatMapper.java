@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 商品类目 Mapper 接口
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 public interface ItemCatMapper extends BaseMapper<ItemCat> {
     public Long selectIdByName(String name);

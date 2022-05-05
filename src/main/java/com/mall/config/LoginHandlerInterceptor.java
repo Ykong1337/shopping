@@ -1,9 +1,6 @@
 package com.mall.config;
 
-import com.mall.entity.Log;
 import com.mall.entity.User;
-import com.mall.service.LogService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 

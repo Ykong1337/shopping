@@ -17,8 +17,8 @@ import lombok.EqualsAndHashCode;
  * 商品表
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

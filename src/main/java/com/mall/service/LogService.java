@@ -9,8 +9,8 @@ import com.mall.vo.DataVo;
  * 登录日志表 服务类
  * </p>
  *
- * @author Gee
- * @since 2021-04-25
+ * @author Ykong
+ *
  */
 public interface LogService extends IService<Log> {
     public DataVo<Log> selectList(Integer page, Integer limit);

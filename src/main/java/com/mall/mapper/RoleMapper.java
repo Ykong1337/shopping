@@ -8,8 +8,8 @@ import com.mall.entity.Role;
  *  Mapper 接口
  * </p>
  *
- * @author Gee
- * @since 2021-01-17
+ * @author Ykong
+ *
  */
 public interface RoleMapper extends BaseMapper<Role> {
 

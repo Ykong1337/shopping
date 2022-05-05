@@ -11,8 +11,8 @@ import java.util.List;
  *  服务类
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 public interface OrderShippingService extends IService<OrderShipping> {
     public DataVo<OrderShipping> selectList(Integer page, Integer limit);

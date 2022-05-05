@@ -23,8 +23,8 @@ import java.util.List;
  * 商品类目 服务实现类
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 @Service
 public class ItemCatServiceImpl extends ServiceImpl<ItemCatMapper, ItemCat> implements ItemCatService {

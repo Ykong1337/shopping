@@ -8,8 +8,8 @@ import com.mall.entity.UserRole;
  * 用户角色 Mapper 接口
  * </p>
  *
- * @author Gee
- * @since 2021-01-17
+ * @author Ykong
+ *
  */
 public interface UserRoleMapper extends BaseMapper<UserRole> {
 

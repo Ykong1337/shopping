@@ -1,6 +1,5 @@
 package com.mall.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mall.entity.Log;
 import com.mall.entity.User;
 import com.mall.service.LogService;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Locale;
 
 @Api("登录控制类")
 @Controller

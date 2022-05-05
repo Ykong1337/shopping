@@ -13,8 +13,8 @@ import java.util.List;
  * 商品表 服务类
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 public interface ItemService extends IService<Item> {
     /**

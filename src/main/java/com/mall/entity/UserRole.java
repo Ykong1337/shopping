@@ -14,8 +14,8 @@ import java.io.Serializable;
  * 用户角色
  * </p>
  *
- * @author Gee
- * @since 2021-01-17
+ * @author Ykong
+ *
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

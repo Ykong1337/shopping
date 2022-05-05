@@ -2,11 +2,10 @@ package com.mall.service.impl;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mall.entity.Log;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mall.entity.Oplog;
 import com.mall.mapper.OplogMapper;
 import com.mall.service.OplogService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mall.vo.DataVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,8 +15,8 @@ import org.springframework.stereotype.Service;
  * 操作日志表 服务实现类
  * </p>
  *
- * @author Gee
- * @since 2021-04-25
+ * @author Ykong
+ *
  */
 @Service
 public class OplogServiceImpl extends ServiceImpl<OplogMapper, Oplog> implements OplogService {

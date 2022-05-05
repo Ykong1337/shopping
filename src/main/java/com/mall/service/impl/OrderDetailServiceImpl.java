@@ -15,8 +15,8 @@ import java.util.List;
  *  服务实现类
  * </p>
  *
- * @author Gee
- * @since 2021-02-02
+ * @author Ykong
+ *
  */
 @Service
 public class OrderDetailServiceImpl extends ServiceImpl<OrderDetailMapper, OrderDetail> implements OrderDetailService {

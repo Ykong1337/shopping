@@ -10,8 +10,8 @@ import java.util.List;
  * 服务类
  * </p>
  *
- * @author Gee
- * @since 2021-01-17
+ * @author Ykong
+ *
  */
 public interface RoleService extends IService<Role> {
     public List<Role> select();

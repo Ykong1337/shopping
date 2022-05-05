@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
  * 登录日志表 服务实现类
  * </p>
  *
- * @author Gee
- * @since 2021-04-25
+ * @author Ykong
+ *
  */
 @Service
 public class LogServiceImpl extends ServiceImpl<LogMapper, Log> implements LogService {

@@ -10,11 +10,12 @@ import com.mall.service.UserService;
 import com.mall.vo.DataVo;
 import com.mall.vo.UserVo;
 import io.swagger.annotations.Api;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -26,8 +27,8 @@ import java.util.List;
  * 前端控制器
  * </p>
  *
- * @author Gee
- * @since 2021-01-06
+ * @author Ykong
+ *
  */
 @Api("用户控制类")
 @Controller

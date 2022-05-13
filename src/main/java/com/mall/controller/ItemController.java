@@ -11,7 +11,6 @@ import com.mall.service.OplogService;
 import com.mall.vo.DataVo;
 import com.mall.vo.ItemVo;
 import io.swagger.annotations.Api;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -64,7 +63,7 @@ public class ItemController {
             oplog.setOpEvent("新增商品数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
-            return DataVo.add();
+            return DataVo.addok();
         }
         return DataVo.empty();
     }

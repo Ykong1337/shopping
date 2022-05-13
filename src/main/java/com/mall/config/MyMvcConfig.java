@@ -49,6 +49,6 @@ public class MyMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginHandlerInterceptor())
                 .addPathPatterns("/**")
-                .excludePathPatterns("/", "/login","/toMore/{id}","/toAllItem","/toInformation","/toAbout","/static/**","/toResult","/toCatResult/{id}","/druid/*","/toMore/img/**","/img/**","/toCatResult/img/**");
+                .excludePathPatterns("/", "/login", "/addUser", "/toMore/{id}", "/toAllItem", "/toInformation", "/toAbout", "/static/**", "/toResult", "/toCatResult/{id}", "/druid/*", "/toMore/img/**", "/img/**", "/toCatResult/img/**");
     }
 }

@@ -28,7 +28,6 @@ import java.util.List;
  * </p>
  *
  * @author Ykong
- *
  */
 @Api("用户控制类")
 @Controller
@@ -41,9 +40,10 @@ public class UserController {
     private OplogService oplogService;
 
     @RequestMapping("/toUser")
-    public String toUser(){
+    public String toUser() {
         return "back/member";
     }
+
     /**
      * 查询所有用户
      *
@@ -62,9 +62,13 @@ public class UserController {
     public DataVo add(@RequestBody User user, HttpServletRequest request, HttpSession session) {
         Oplog oplog = new Oplog();
         if (user != null) {
+            if (userService.selectCount(user.getUname()) > 0) {
+                return DataVo.add_failed();
+            }
+            user.setIdentity((long) 3);
             userService.add(user);
             oplog.setIp(request.getRemoteAddr());
-            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
+//            oplog.setOpUser(((User) session.getAttribute("user")).getUname());
             oplog.setOpEvent("新增用户数据");
             oplog.setOpStatus(1);
             oplogService.add(oplog);
@@ -88,6 +92,7 @@ public class UserController {
         }
         return DataVo.del();
     }
+
     @RequestMapping("/updateUser")
     @ResponseBody
     public DataVo updateUser(@RequestBody User user, HttpServletRequest request, HttpSession session) {
@@ -115,7 +120,7 @@ public class UserController {
     }
 
     @RequestMapping("/toUpdateUser")
-    public String toUpdateUser(Long id,Model model) {
+    public String toUpdateUser(Long id, Model model) {
         System.out.println(id);
         final UserVo userVo = userService.selectById(id);
         model.addAttribute("userVo", userVo);

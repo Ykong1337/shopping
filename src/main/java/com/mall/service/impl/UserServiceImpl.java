@@ -3,28 +3,28 @@ package com.mall.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mall.entity.Role;
 import com.mall.entity.User;
 import com.mall.mapper.RoleMapper;
 import com.mall.mapper.UserMapper;
 import com.mall.service.UserService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mall.vo.DataVo;
 import com.mall.vo.UserVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author Ykong
- *
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
@@ -33,13 +33,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private UserMapper userMapper;
     @Autowired
     private RoleMapper roleMapper;
+
     @Override
     public DataVo<UserVo> selectAll(Integer page, Integer limit) {
         DataVo<UserVo> userVoDataVo = new DataVo<>();
         userVoDataVo.setCode(0);
         userVoDataVo.setMsg("");
         IPage<User> Ipage = new Page<>(page, limit);
-        final IPage<User> userIPage= userMapper.selectPage(Ipage, null);
+        final IPage<User> userIPage = userMapper.selectPage(Ipage, null);
         final List<User> users = userIPage.getRecords();
         userVoDataVo.setCount((int) userIPage.getTotal());//给count赋值
 
@@ -47,7 +48,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         List<UserVo> userVoList = new ArrayList<>();
         for (User user : users) {
             UserVo userVo = new UserVo();
-            BeanUtils.copyProperties(user,userVo);//把user的数据赋值给itemVo
+            BeanUtils.copyProperties(user, userVo);//把user的数据赋值给itemVo
             QueryWrapper wrapper = new QueryWrapper();
             wrapper.eq("id", user.getIdentity());
             final Role role = roleMapper.selectOne(wrapper);
@@ -87,6 +88,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
+    @Transactional
     public void add(User user) {
         userMapper.insert(user);
     }
@@ -99,6 +101,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public void updateUser(User user) {
         userMapper.updateById(user);
+    }
+
+    @Override
+    public int selectCount(String uname) {
+        return userMapper.selectCount(uname);
     }
 
 }

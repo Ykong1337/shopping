@@ -31,4 +31,6 @@ public interface UserService extends IService<User> {
 
     public void updateUser(User user);
 
+    int selectCount(String uname);
+
 }

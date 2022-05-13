@@ -31,6 +31,9 @@ public class DataVo<T> implements Serializable {
     public static <T> DataVo<T> add() {
         return new DataVo(ResultEnum.ADD_SUCCESS.getCode(), ResultEnum.ADD_SUCCESS.getMsg());
     }
+    public static <T> DataVo<T> add_failed() {
+        return new DataVo(ResultEnum.ADD_FAILED.getCode(), ResultEnum.ADD_FAILED.getMsg());
+    }
     public static <T> DataVo<T> update() {
         return new DataVo(ResultEnum.UPDATE_SUCCESS.getCode(), ResultEnum.UPDATE_SUCCESS.getMsg());
     }
